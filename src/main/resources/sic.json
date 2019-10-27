@@ -1,0 +1,3010 @@
+[
+  {
+    "key": "Section A",
+    "value": "Agriculture, Forestry and Fishing"
+  },
+  {
+    "key": "01110",
+    "value": "Growing of cereals (except rice), leguminous crops and oil seeds"
+  },
+  {
+    "key": "01120",
+    "value": "Growing of rice"
+  },
+  {
+    "key": "01130",
+    "value": "Growing of vegetables and melons, roots and tubers"
+  },
+  {
+    "key": "01140",
+    "value": "Growing of sugar cane"
+  },
+  {
+    "key": "01150",
+    "value": "Growing of tobacco"
+  },
+  {
+    "key": "01160",
+    "value": "Growing of fibre crops"
+  },
+  {
+    "key": "01190",
+    "value": "Growing of other non-perennial crops"
+  },
+  {
+    "key": "01210",
+    "value": "Growing of grapes"
+  },
+  {
+    "key": "01220",
+    "value": "Growing of tropical and subtropical fruits"
+  },
+  {
+    "key": "01230",
+    "value": "Growing of citrus fruits"
+  },
+  {
+    "key": "01240",
+    "value": "Growing of pome fruits and stone fruits"
+  },
+  {
+    "key": "01250",
+    "value": "Growing of other tree and bush fruits and nuts"
+  },
+  {
+    "key": "01260",
+    "value": "Growing of oleaginous fruits"
+  },
+  {
+    "key": "01270",
+    "value": "Growing of beverage crops"
+  },
+  {
+    "key": "01280",
+    "value": "Growing of spices, aromatic, drug and pharmaceutical crops"
+  },
+  {
+    "key": "01290",
+    "value": "Growing of other perennial crops"
+  },
+  {
+    "key": "01300",
+    "value": "Plant propagation"
+  },
+  {
+    "key": "01410",
+    "value": "Raising of dairy cattle"
+  },
+  {
+    "key": "01420",
+    "value": "Raising of other cattle and buffaloes"
+  },
+  {
+    "key": "01430",
+    "value": "Raising of horses and other equines"
+  },
+  {
+    "key": "01440",
+    "value": "Raising of camels and camelids"
+  },
+  {
+    "key": "01450",
+    "value": "Raising of sheep and goats"
+  },
+  {
+    "key": "01460",
+    "value": "Raising of swine/pigs"
+  },
+  {
+    "key": "01470",
+    "value": "Raising of poultry"
+  },
+  {
+    "key": "01490",
+    "value": "Raising of other animals"
+  },
+  {
+    "key": "01500",
+    "value": "Mixed farming"
+  },
+  {
+    "key": "01610",
+    "value": "Support activities for crop production"
+  },
+  {
+    "key": "01621",
+    "value": "Farm animal boarding and care"
+  },
+  {
+    "key": "01629",
+    "value": "Support activities for animal production (other than farm animal boarding and care) n.e.c."
+  },
+  {
+    "key": "01630",
+    "value": "Post-harvest crop activities"
+  },
+  {
+    "key": "01640",
+    "value": "Seed processing for propagation"
+  },
+  {
+    "key": "01700",
+    "value": "Hunting, trapping and related service activities"
+  },
+  {
+    "key": "02100",
+    "value": "Silviculture and other forestry activities"
+  },
+  {
+    "key": "02200",
+    "value": "Logging"
+  },
+  {
+    "key": "02300",
+    "value": "Gathering of wild growing non-wood products"
+  },
+  {
+    "key": "02400",
+    "value": "Support services to forestry"
+  },
+  {
+    "key": "03110",
+    "value": "Marine fishing"
+  },
+  {
+    "key": "03120",
+    "value": "Freshwater fishing"
+  },
+  {
+    "key": "03210",
+    "value": "Marine aquaculture"
+  },
+  {
+    "key": "03220",
+    "value": "Freshwater aquaculture"
+  },
+  {
+    "key": "Section B",
+    "value": "Mining and Quarrying"
+  },
+  {
+    "key": "05101",
+    "value": "Deep coal mines"
+  },
+  {
+    "key": "05102",
+    "value": "Open cast coal working"
+  },
+  {
+    "key": "05200",
+    "value": "Mining of lignite"
+  },
+  {
+    "key": "06100",
+    "value": "Extraction of crude petroleum"
+  },
+  {
+    "key": "06200",
+    "value": "Extraction of natural gas"
+  },
+  {
+    "key": "07100",
+    "value": "Mining of iron ores"
+  },
+  {
+    "key": "07210",
+    "value": "Mining of uranium and thorium ores"
+  },
+  {
+    "key": "07290",
+    "value": "Mining of other non-ferrous metal ores"
+  },
+  {
+    "key": "08110",
+    "value": "Quarrying of ornamental and building stone, limestone, gypsum, chalk and slate"
+  },
+  {
+    "key": "08120",
+    "value": "Operation of gravel and sand pits; mining of clays and kaolin"
+  },
+  {
+    "key": "08910",
+    "value": "Mining of chemical and fertilizer minerals"
+  },
+  {
+    "key": "08920",
+    "value": "Extraction of peat"
+  },
+  {
+    "key": "08930",
+    "value": "Extraction of salt"
+  },
+  {
+    "key": "08990",
+    "value": "Other mining and quarrying n.e.c."
+  },
+  {
+    "key": "09100",
+    "value": "Support activities for petroleum and natural gas mining"
+  },
+  {
+    "key": "09900",
+    "value": "Support activities for other mining and quarrying"
+  },
+  {
+    "key": "Section C",
+    "value": "Manufacturing"
+  },
+  {
+    "key": "10110",
+    "value": "Processing and preserving of meat"
+  },
+  {
+    "key": "10120",
+    "value": "Processing and preserving of poultry meat"
+  },
+  {
+    "key": "10130",
+    "value": "Production of meat and poultry meat products"
+  },
+  {
+    "key": "10200",
+    "value": "Processing and preserving of fish, crustaceans and molluscs"
+  },
+  {
+    "key": "10310",
+    "value": "Processing and preserving of potatoes"
+  },
+  {
+    "key": "10320",
+    "value": "Manufacture of fruit and vegetable juice"
+  },
+  {
+    "key": "10390",
+    "value": "Other processing and preserving of fruit and vegetables"
+  },
+  {
+    "key": "10410",
+    "value": "Manufacture of oils and fats"
+  },
+  {
+    "key": "10420",
+    "value": "Manufacture of margarine and similar edible fats"
+  },
+  {
+    "key": "10511",
+    "value": "Liquid milk and cream production"
+  },
+  {
+    "key": "10512",
+    "value": "Butter and cheese production"
+  },
+  {
+    "key": "10519",
+    "value": "Manufacture of other milk products"
+  },
+  {
+    "key": "10520",
+    "value": "Manufacture of ice cream"
+  },
+  {
+    "key": "10611",
+    "value": "Grain milling"
+  },
+  {
+    "key": "10612",
+    "value": "Manufacture of breakfast cereals and cereals-based food"
+  },
+  {
+    "key": "10620",
+    "value": "Manufacture of starches and starch products"
+  },
+  {
+    "key": "10710",
+    "value": "Manufacture of bread; manufacture of fresh pastry goods and cakes"
+  },
+  {
+    "key": "10720",
+    "value": "Manufacture of rusks and biscuits; manufacture of preserved pastry goods and cakes"
+  },
+  {
+    "key": "10730",
+    "value": "Manufacture of macaroni, noodles, couscous and similar farinaceous products"
+  },
+  {
+    "key": "10810",
+    "value": "Manufacture of sugar"
+  },
+  {
+    "key": "10821",
+    "value": "Manufacture of cocoa and chocolate confectionery"
+  },
+  {
+    "key": "10822",
+    "value": "Manufacture of sugar confectionery"
+  },
+  {
+    "key": "10831",
+    "value": "Tea processing"
+  },
+  {
+    "key": "10832",
+    "value": "Production of coffee and coffee substitutes"
+  },
+  {
+    "key": "10840",
+    "value": "Manufacture of condiments and seasonings"
+  },
+  {
+    "key": "10850",
+    "value": "Manufacture of prepared meals and dishes"
+  },
+  {
+    "key": "10860",
+    "value": "Manufacture of homogenized food preparations and dietetic food"
+  },
+  {
+    "key": "10890",
+    "value": "Manufacture of other food products n.e.c."
+  },
+  {
+    "key": "10910",
+    "value": "Manufacture of prepared feeds for farm animals"
+  },
+  {
+    "key": "10920",
+    "value": "Manufacture of prepared pet foods"
+  },
+  {
+    "key": "11010",
+    "value": "Distilling, rectifying and blending of spirits"
+  },
+  {
+    "key": "11020",
+    "value": "Manufacture of wine from grape"
+  },
+  {
+    "key": "11030",
+    "value": "Manufacture of cider and other fruit wines"
+  },
+  {
+    "key": "11040",
+    "value": "Manufacture of other non-distilled fermented beverages"
+  },
+  {
+    "key": "11050",
+    "value": "Manufacture of beer"
+  },
+  {
+    "key": "11060",
+    "value": "Manufacture of malt"
+  },
+  {
+    "key": "11070",
+    "value": "Manufacture of soft drinks; production of mineral waters and other bottled waters"
+  },
+  {
+    "key": "12000",
+    "value": "Manufacture of tobacco products"
+  },
+  {
+    "key": "13100",
+    "value": "Preparation and spinning of textile fibres"
+  },
+  {
+    "key": "13200",
+    "value": "Weaving of textiles"
+  },
+  {
+    "key": "13300",
+    "value": "Finishing of textiles"
+  },
+  {
+    "key": "13910",
+    "value": "Manufacture of knitted and crocheted fabrics"
+  },
+  {
+    "key": "13921",
+    "value": "Manufacture of soft furnishings"
+  },
+  {
+    "key": "13922",
+    "value": "manufacture of canvas goods, sacks, etc."
+  },
+  {
+    "key": "13923",
+    "value": "manufacture of household textiles"
+  },
+  {
+    "key": "13931",
+    "value": "Manufacture of woven or tufted carpets and rugs"
+  },
+  {
+    "key": "13939",
+    "value": "Manufacture of other carpets and rugs"
+  },
+  {
+    "key": "13940",
+    "value": "Manufacture of cordage, rope, twine and netting"
+  },
+  {
+    "key": "13950",
+    "value": "Manufacture of non-wovens and articles made from non-wovens, except apparel"
+  },
+  {
+    "key": "13960",
+    "value": "Manufacture of other technical and industrial textiles"
+  },
+  {
+    "key": "13990",
+    "value": "Manufacture of other textiles n.e.c."
+  },
+  {
+    "key": "14110",
+    "value": "Manufacture of leather clothes"
+  },
+  {
+    "key": "14120",
+    "value": "Manufacture of workwear"
+  },
+  {
+    "key": "14131",
+    "value": "Manufacture of other men's outerwear"
+  },
+  {
+    "key": "14132",
+    "value": "Manufacture of other women's outerwear"
+  },
+  {
+    "key": "14141",
+    "value": "Manufacture of men's underwear"
+  },
+  {
+    "key": "14142",
+    "value": "Manufacture of women's underwear"
+  },
+  {
+    "key": "14190",
+    "value": "Manufacture of other wearing apparel and accessories n.e.c."
+  },
+  {
+    "key": "14200",
+    "value": "Manufacture of articles of fur"
+  },
+  {
+    "key": "14310",
+    "value": "Manufacture of knitted and crocheted hosiery"
+  },
+  {
+    "key": "14390",
+    "value": "Manufacture of other knitted and crocheted apparel"
+  },
+  {
+    "key": "15110",
+    "value": "Tanning and dressing of leather; dressing and dyeing of fur"
+  },
+  {
+    "key": "15120",
+    "value": "Manufacture of luggage, handbags and the like, saddlery and harness"
+  },
+  {
+    "key": "15200",
+    "value": "Manufacture of footwear"
+  },
+  {
+    "key": "16100",
+    "value": "Sawmilling and planing of wood"
+  },
+  {
+    "key": "16210",
+    "value": "Manufacture of veneer sheets and wood-based panels"
+  },
+  {
+    "key": "16220",
+    "value": "Manufacture of assembled parquet floors"
+  },
+  {
+    "key": "16230",
+    "value": "Manufacture of other builders' carpentry and joinery"
+  },
+  {
+    "key": "16240",
+    "value": "Manufacture of wooden containers"
+  },
+  {
+    "key": "16290",
+    "value": "Manufacture of other products of wood; manufacture of articles of cork, straw and plaiting materials"
+  },
+  {
+    "key": "17110",
+    "value": "Manufacture of pulp"
+  },
+  {
+    "key": "17120",
+    "value": "Manufacture of paper and paperboard"
+  },
+  {
+    "key": "17211",
+    "value": "Manufacture of corrugated paper and paperboard, sacks and bags"
+  },
+  {
+    "key": "17219",
+    "value": "Manufacture of other paper and paperboard containers"
+  },
+  {
+    "key": "17220",
+    "value": "Manufacture of household and sanitary goods and of toilet requisites"
+  },
+  {
+    "key": "17230",
+    "value": "Manufacture of paper stationery"
+  },
+  {
+    "key": "17240",
+    "value": "Manufacture of wallpaper"
+  },
+  {
+    "key": "17290",
+    "value": "Manufacture of other articles of paper and paperboard n.e.c."
+  },
+  {
+    "key": "18110",
+    "value": "Printing of newspapers"
+  },
+  {
+    "key": "18121",
+    "value": "Manufacture of printed labels"
+  },
+  {
+    "key": "18129",
+    "value": "Printing n.e.c."
+  },
+  {
+    "key": "18130",
+    "value": "Pre-press and pre-media services"
+  },
+  {
+    "key": "18140",
+    "value": "Binding and related services"
+  },
+  {
+    "key": "18201",
+    "value": "Reproduction of sound recording"
+  },
+  {
+    "key": "18202",
+    "value": "Reproduction of video recording"
+  },
+  {
+    "key": "18203",
+    "value": "Reproduction of computer media"
+  },
+  {
+    "key": "19100",
+    "value": "Manufacture of coke oven products"
+  },
+  {
+    "key": "19201",
+    "value": "Mineral oil refining"
+  },
+  {
+    "key": "19209",
+    "value": "Other treatment of petroleum products (excluding petrochemicals manufacture)"
+  },
+  {
+    "key": "20110",
+    "value": "Manufacture of industrial gases"
+  },
+  {
+    "key": "20120",
+    "value": "Manufacture of dyes and pigments"
+  },
+  {
+    "key": "20130",
+    "value": "Manufacture of other inorganic basic chemicals"
+  },
+  {
+    "key": "20140",
+    "value": "Manufacture of other organic basic chemicals"
+  },
+  {
+    "key": "20150",
+    "value": "Manufacture of fertilizers and nitrogen compounds"
+  },
+  {
+    "key": "20160",
+    "value": "Manufacture of plastics in primary forms"
+  },
+  {
+    "key": "20170",
+    "value": "Manufacture of synthetic rubber in primary forms"
+  },
+  {
+    "key": "20200",
+    "value": "Manufacture of pesticides and other agrochemical products"
+  },
+  {
+    "key": "20301",
+    "value": "Manufacture of paints, varnishes and similar coatings, mastics and sealants"
+  },
+  {
+    "key": "20302",
+    "value": "Manufacture of printing ink"
+  },
+  {
+    "key": "20411",
+    "value": "Manufacture of soap and detergents"
+  },
+  {
+    "key": "20412",
+    "value": "Manufacture of cleaning and polishing preparations"
+  },
+  {
+    "key": "20420",
+    "value": "Manufacture of perfumes and toilet preparations"
+  },
+  {
+    "key": "20510",
+    "value": "Manufacture of explosives"
+  },
+  {
+    "key": "20520",
+    "value": "Manufacture of glues"
+  },
+  {
+    "key": "20530",
+    "value": "Manufacture of essential oils"
+  },
+  {
+    "key": "20590",
+    "value": "Manufacture of other chemical products n.e.c."
+  },
+  {
+    "key": "20600",
+    "value": "Manufacture of man-made fibres"
+  },
+  {
+    "key": "21100",
+    "value": "Manufacture of basic pharmaceutical products"
+  },
+  {
+    "key": "21200",
+    "value": "Manufacture of pharmaceutical preparations"
+  },
+  {
+    "key": "22110",
+    "value": "Manufacture of rubber tyres and tubes; retreading and rebuilding of rubber tyres"
+  },
+  {
+    "key": "22190",
+    "value": "Manufacture of other rubber products"
+  },
+  {
+    "key": "22210",
+    "value": "Manufacture of plastic plates, sheets, tubes and profiles"
+  },
+  {
+    "key": "22220",
+    "value": "Manufacture of plastic packing goods"
+  },
+  {
+    "key": "22230",
+    "value": "Manufacture of builders ware of plastic"
+  },
+  {
+    "key": "22290",
+    "value": "Manufacture of other plastic products"
+  },
+  {
+    "key": "23110",
+    "value": "Manufacture of flat glass"
+  },
+  {
+    "key": "23120",
+    "value": "Shaping and processing of flat glass"
+  },
+  {
+    "key": "23130",
+    "value": "Manufacture of hollow glass"
+  },
+  {
+    "key": "23140",
+    "value": "Manufacture of glass fibres"
+  },
+  {
+    "key": "23190",
+    "value": "Manufacture and processing of other glass, including technical glassware"
+  },
+  {
+    "key": "23200",
+    "value": "Manufacture of refractory products"
+  },
+  {
+    "key": "23310",
+    "value": "Manufacture of ceramic tiles and flags"
+  },
+  {
+    "key": "23320",
+    "value": "Manufacture of bricks, tiles and construction products, in baked clay"
+  },
+  {
+    "key": "23410",
+    "value": "Manufacture of ceramic household and ornamental articles"
+  },
+  {
+    "key": "23420",
+    "value": "Manufacture of ceramic sanitary fixtures"
+  },
+  {
+    "key": "23430",
+    "value": "Manufacture of ceramic insulators and insulating fittings"
+  },
+  {
+    "key": "23440",
+    "value": "Manufacture of other technical ceramic products"
+  },
+  {
+    "key": "23490",
+    "value": "Manufacture of other ceramic products n.e.c."
+  },
+  {
+    "key": "23510",
+    "value": "Manufacture of cement"
+  },
+  {
+    "key": "23520",
+    "value": "Manufacture of lime and plaster"
+  },
+  {
+    "key": "23610",
+    "value": "Manufacture of concrete products for construction purposes"
+  },
+  {
+    "key": "23620",
+    "value": "Manufacture of plaster products for construction purposes"
+  },
+  {
+    "key": "23630",
+    "value": "Manufacture of ready-mixed concrete"
+  },
+  {
+    "key": "23640",
+    "value": "Manufacture of mortars"
+  },
+  {
+    "key": "23650",
+    "value": "Manufacture of fibre cement"
+  },
+  {
+    "key": "23690",
+    "value": "Manufacture of other articles of concrete, plaster and cement"
+  },
+  {
+    "key": "23700",
+    "value": "Cutting, shaping and finishing of stone"
+  },
+  {
+    "key": "23910",
+    "value": "Production of abrasive products"
+  },
+  {
+    "key": "23990",
+    "value": "Manufacture of other non-metallic mineral products n.e.c."
+  },
+  {
+    "key": "24100",
+    "value": "Manufacture of basic iron and steel and of ferro-alloys"
+  },
+  {
+    "key": "24200",
+    "value": "Manufacture of tubes, pipes, hollow profiles and related fittings, of steel"
+  },
+  {
+    "key": "24310",
+    "value": "Cold drawing of bars"
+  },
+  {
+    "key": "24320",
+    "value": "Cold rolling of narrow strip"
+  },
+  {
+    "key": "24330",
+    "value": "Cold forming or folding"
+  },
+  {
+    "key": "24340",
+    "value": "Cold drawing of wire"
+  },
+  {
+    "key": "24410",
+    "value": "Precious metals production"
+  },
+  {
+    "key": "24420",
+    "value": "Aluminium production"
+  },
+  {
+    "key": "24430",
+    "value": "Lead, zinc and tin production"
+  },
+  {
+    "key": "24440",
+    "value": "Copper production"
+  },
+  {
+    "key": "24450",
+    "value": "Other non-ferrous metal production"
+  },
+  {
+    "key": "24460",
+    "value": "Processing of nuclear fuel"
+  },
+  {
+    "key": "24510",
+    "value": "Casting of iron"
+  },
+  {
+    "key": "24520",
+    "value": "Casting of steel"
+  },
+  {
+    "key": "24530",
+    "value": "Casting of light metals"
+  },
+  {
+    "key": "24540",
+    "value": "Casting of other non-ferrous metals"
+  },
+  {
+    "key": "25110",
+    "value": "Manufacture of metal structures and parts of structures"
+  },
+  {
+    "key": "25120",
+    "value": "Manufacture of doors and windows of metal"
+  },
+  {
+    "key": "25210",
+    "value": "Manufacture of central heating radiators and boilers"
+  },
+  {
+    "key": "25290",
+    "value": "Manufacture of other tanks, reservoirs and containers of metal"
+  },
+  {
+    "key": "25300",
+    "value": "Manufacture of steam generators, except central heating hot water boilers"
+  },
+  {
+    "key": "25400",
+    "value": "Manufacture of weapons and ammunition"
+  },
+  {
+    "key": "25500",
+    "value": "Forging, pressing, stamping and roll-forming of metal; powder metallurgy"
+  },
+  {
+    "key": "25610",
+    "value": "Treatment and coating of metals"
+  },
+  {
+    "key": "25620",
+    "value": "Machining"
+  },
+  {
+    "key": "25710",
+    "value": "Manufacture of cutlery"
+  },
+  {
+    "key": "25720",
+    "value": "Manufacture of locks and hinges"
+  },
+  {
+    "key": "25730",
+    "value": "Manufacture of tools"
+  },
+  {
+    "key": "25910",
+    "value": "Manufacture of steel drums and similar containers"
+  },
+  {
+    "key": "25920",
+    "value": "Manufacture of light metal packaging"
+  },
+  {
+    "key": "25930",
+    "value": "Manufacture of wire products, chain and springs"
+  },
+  {
+    "key": "25940",
+    "value": "Manufacture of fasteners and screw machine products"
+  },
+  {
+    "key": "25990",
+    "value": "Manufacture of other fabricated metal products n.e.c."
+  },
+  {
+    "key": "26110",
+    "value": "Manufacture of electronic components"
+  },
+  {
+    "key": "26120",
+    "value": "Manufacture of loaded electronic boards"
+  },
+  {
+    "key": "26200",
+    "value": "Manufacture of computers and peripheral equipment"
+  },
+  {
+    "key": "26301",
+    "value": "Manufacture of telegraph and telephone apparatus and equipment"
+  },
+  {
+    "key": "26309",
+    "value": "Manufacture of communication equipment other than telegraph, and telephone apparatus and equipment"
+  },
+  {
+    "key": "26400",
+    "value": "Manufacture of consumer electronics"
+  },
+  {
+    "key": "26511",
+    "value": "Manufacture of electronic measuring, testing etc. equipment, not for industrial process control"
+  },
+  {
+    "key": "26512",
+    "value": "Manufacture of electronic industrial process control equipment"
+  },
+  {
+    "key": "26513",
+    "value": "Manufacture of non-electronic measuring, testing etc. equipment, not for industrial process control"
+  },
+  {
+    "key": "26514",
+    "value": "Manufacture of non-electronic industrial process control equipment"
+  },
+  {
+    "key": "26520",
+    "value": "Manufacture of watches and clocks"
+  },
+  {
+    "key": "26600",
+    "value": "Manufacture of irradiation, electromedical and electrotherapeutic equipment"
+  },
+  {
+    "key": "26701",
+    "value": "Manufacture of optical precision instruments"
+  },
+  {
+    "key": "26702",
+    "value": "Manufacture of photographic and cinematographic equipment"
+  },
+  {
+    "key": "26800",
+    "value": "Manufacture of magnetic and optical media"
+  },
+  {
+    "key": "27110",
+    "value": "Manufacture of electric motors, generators and transformers"
+  },
+  {
+    "key": "27120",
+    "value": "Manufacture of electricity distribution and control apparatus"
+  },
+  {
+    "key": "27200",
+    "value": "Manufacture of batteries and accumulators"
+  },
+  {
+    "key": "27310",
+    "value": "Manufacture of fibre optic cables"
+  },
+  {
+    "key": "27320",
+    "value": "Manufacture of other electronic and electric wires and cables"
+  },
+  {
+    "key": "27330",
+    "value": "Manufacture of wiring devices"
+  },
+  {
+    "key": "27400",
+    "value": "Manufacture of electric lighting equipment"
+  },
+  {
+    "key": "27510",
+    "value": "Manufacture of electric domestic appliances"
+  },
+  {
+    "key": "27520",
+    "value": "Manufacture of non-electric domestic appliances"
+  },
+  {
+    "key": "27900",
+    "value": "Manufacture of other electrical equipment"
+  },
+  {
+    "key": "28110",
+    "value": "Manufacture of engines and turbines, except aircraft, vehicle and cycle engines"
+  },
+  {
+    "key": "28120",
+    "value": "Manufacture of fluid power equipment"
+  },
+  {
+    "key": "28131",
+    "value": "Manufacture of pumps"
+  },
+  {
+    "key": "28132",
+    "value": "Manufacture of compressors"
+  },
+  {
+    "key": "28140",
+    "value": "Manufacture of taps and valves"
+  },
+  {
+    "key": "28150",
+    "value": "Manufacture of bearings, gears, gearing and driving elements"
+  },
+  {
+    "key": "28210",
+    "value": "Manufacture of ovens, furnaces and furnace burners"
+  },
+  {
+    "key": "28220",
+    "value": "Manufacture of lifting and handling equipment"
+  },
+  {
+    "key": "28230",
+    "value": "Manufacture of office machinery and equipment (except computers and peripheral equipment)"
+  },
+  {
+    "key": "28240",
+    "value": "Manufacture of power-driven hand tools"
+  },
+  {
+    "key": "28250",
+    "value": "Manufacture of non-domestic cooling and ventilation equipment"
+  },
+  {
+    "key": "28290",
+    "value": "Manufacture of other general-purpose machinery n.e.c."
+  },
+  {
+    "key": "28301",
+    "value": "Manufacture of agricultural tractors"
+  },
+  {
+    "key": "28302",
+    "value": "Manufacture of agricultural and forestry machinery other than tractors"
+  },
+  {
+    "key": "28410",
+    "value": "Manufacture of metal forming machinery"
+  },
+  {
+    "key": "28490",
+    "value": "Manufacture of other machine tools"
+  },
+  {
+    "key": "28910",
+    "value": "Manufacture of machinery for metallurgy"
+  },
+  {
+    "key": "28921",
+    "value": "Manufacture of machinery for mining"
+  },
+  {
+    "key": "28922",
+    "value": "Manufacture of earthmoving equipment"
+  },
+  {
+    "key": "28923",
+    "value": "Manufacture of equipment for concrete crushing and screening and roadworks"
+  },
+  {
+    "key": "28930",
+    "value": "Manufacture of machinery for food, beverage and tobacco processing"
+  },
+  {
+    "key": "28940",
+    "value": "Manufacture of machinery for textile, apparel and leather production"
+  },
+  {
+    "key": "28950",
+    "value": "Manufacture of machinery for paper and paperboard production"
+  },
+  {
+    "key": "28960",
+    "value": "Manufacture of plastics and rubber machinery"
+  },
+  {
+    "key": "28990",
+    "value": "Manufacture of other special-purpose machinery n.e.c."
+  },
+  {
+    "key": "29100",
+    "value": "Manufacture of motor vehicles"
+  },
+  {
+    "key": "29201",
+    "value": "Manufacture of bodies (coachwork) for motor vehicles (except caravans)"
+  },
+  {
+    "key": "29202",
+    "value": "Manufacture of trailers and semi-trailers"
+  },
+  {
+    "key": "29203",
+    "value": "Manufacture of caravans"
+  },
+  {
+    "key": "29310",
+    "value": "Manufacture of electrical and electronic equipment for motor vehicles and their engines"
+  },
+  {
+    "key": "29320",
+    "value": "Manufacture of other parts and accessories for motor vehicles"
+  },
+  {
+    "key": "30110",
+    "value": "Building of ships and floating structures"
+  },
+  {
+    "key": "30120",
+    "value": "Building of pleasure and sporting boats"
+  },
+  {
+    "key": "30200",
+    "value": "Manufacture of railway locomotives and rolling stock"
+  },
+  {
+    "key": "30300",
+    "value": "Manufacture of air and spacecraft and related machinery"
+  },
+  {
+    "key": "30400",
+    "value": "Manufacture of military fighting vehicles"
+  },
+  {
+    "key": "30910",
+    "value": "Manufacture of motorcycles"
+  },
+  {
+    "key": "30920",
+    "value": "Manufacture of bicycles and invalid carriages"
+  },
+  {
+    "key": "30990",
+    "value": "Manufacture of other transport equipment n.e.c."
+  },
+  {
+    "key": "31010",
+    "value": "Manufacture of office and shop furniture"
+  },
+  {
+    "key": "31020",
+    "value": "Manufacture of kitchen furniture"
+  },
+  {
+    "key": "31030",
+    "value": "Manufacture of mattresses"
+  },
+  {
+    "key": "31090",
+    "value": "Manufacture of other furniture"
+  },
+  {
+    "key": "32110",
+    "value": "Striking of coins"
+  },
+  {
+    "key": "32120",
+    "value": "Manufacture of jewellery and related articles"
+  },
+  {
+    "key": "32130",
+    "value": "Manufacture of imitation jewellery and related articles"
+  },
+  {
+    "key": "32200",
+    "value": "Manufacture of musical instruments"
+  },
+  {
+    "key": "32300",
+    "value": "Manufacture of sports goods"
+  },
+  {
+    "key": "32401",
+    "value": "Manufacture of professional and arcade games and toys"
+  },
+  {
+    "key": "32409",
+    "value": "Manufacture of other games and toys, n.e.c."
+  },
+  {
+    "key": "32500",
+    "value": "Manufacture of medical and dental instruments and supplies"
+  },
+  {
+    "key": "32910",
+    "value": "Manufacture of brooms and brushes"
+  },
+  {
+    "key": "32990",
+    "value": "Other manufacturing n.e.c."
+  },
+  {
+    "key": "33110",
+    "value": "Repair of fabricated metal products"
+  },
+  {
+    "key": "33120",
+    "value": "Repair of machinery"
+  },
+  {
+    "key": "33130",
+    "value": "Repair of electronic and optical equipment"
+  },
+  {
+    "key": "33140",
+    "value": "Repair of electrical equipment"
+  },
+  {
+    "key": "33150",
+    "value": "Repair and maintenance of ships and boats"
+  },
+  {
+    "key": "33160",
+    "value": "Repair and maintenance of aircraft and spacecraft"
+  },
+  {
+    "key": "33170",
+    "value": "Repair and maintenance of other transport equipment n.e.c."
+  },
+  {
+    "key": "33190",
+    "value": "Repair of other equipment"
+  },
+  {
+    "key": "33200",
+    "value": "Installation of industrial machinery and equipment"
+  },
+  {
+    "key": "Section D",
+    "value": "Electricity, gas, steam and air conditioning supply"
+  },
+  {
+    "key": "35110",
+    "value": "Production of electricity"
+  },
+  {
+    "key": "35120",
+    "value": "Transmission of electricity"
+  },
+  {
+    "key": "35130",
+    "value": "Distribution of electricity"
+  },
+  {
+    "key": "35140",
+    "value": "Trade of electricity"
+  },
+  {
+    "key": "35210",
+    "value": "Manufacture of gas"
+  },
+  {
+    "key": "35220",
+    "value": "Distribution of gaseous fuels through mains"
+  },
+  {
+    "key": "35230",
+    "value": "Trade of gas through mains"
+  },
+  {
+    "key": "35300",
+    "value": "Steam and air conditioning supply"
+  },
+  {
+    "key": "Section E",
+    "value": "Water supply, sewerage, waste management and remediation activities"
+  },
+  {
+    "key": "36000",
+    "value": "Water collection, treatment and supply"
+  },
+  {
+    "key": "37000",
+    "value": "Sewerage"
+  },
+  {
+    "key": "38110",
+    "value": "Collection of non-hazardous waste"
+  },
+  {
+    "key": "38120",
+    "value": "Collection of hazardous waste"
+  },
+  {
+    "key": "38210",
+    "value": "Treatment and disposal of non-hazardous waste"
+  },
+  {
+    "key": "38220",
+    "value": "Treatment and disposal of hazardous waste"
+  },
+  {
+    "key": "38310",
+    "value": "Dismantling of wrecks"
+  },
+  {
+    "key": "38320",
+    "value": "Recovery of sorted materials"
+  },
+  {
+    "key": "39000",
+    "value": "Remediation activities and other waste management services"
+  },
+  {
+    "key": "Section F",
+    "value": "Construction"
+  },
+  {
+    "key": "41100",
+    "value": "Development of building projects"
+  },
+  {
+    "key": "41201",
+    "value": "Construction of commercial buildings"
+  },
+  {
+    "key": "41202",
+    "value": "Construction of domestic buildings"
+  },
+  {
+    "key": "42110",
+    "value": "Construction of roads and motorways"
+  },
+  {
+    "key": "42120",
+    "value": "Construction of railways and underground railways"
+  },
+  {
+    "key": "42130",
+    "value": "Construction of bridges and tunnels"
+  },
+  {
+    "key": "42210",
+    "value": "Construction of utility projects for fluids"
+  },
+  {
+    "key": "42220",
+    "value": "Construction of utility projects for electricity and telecommunications"
+  },
+  {
+    "key": "42910",
+    "value": "Construction of water projects"
+  },
+  {
+    "key": "42990",
+    "value": "Construction of other civil engineering projects n.e.c."
+  },
+  {
+    "key": "43110",
+    "value": "Demolition"
+  },
+  {
+    "key": "43120",
+    "value": "Site preparation"
+  },
+  {
+    "key": "43130",
+    "value": "Test drilling and boring"
+  },
+  {
+    "key": "43210",
+    "value": "Electrical installation"
+  },
+  {
+    "key": "43220",
+    "value": "Plumbing, heat and air-conditioning installation"
+  },
+  {
+    "key": "43290",
+    "value": "Other construction installation"
+  },
+  {
+    "key": "43310",
+    "value": "Plastering"
+  },
+  {
+    "key": "43320",
+    "value": "Joinery installation"
+  },
+  {
+    "key": "43330",
+    "value": "Floor and wall covering"
+  },
+  {
+    "key": "43341",
+    "value": "Painting"
+  },
+  {
+    "key": "43342",
+    "value": "Glazing"
+  },
+  {
+    "key": "43390",
+    "value": "Other building completion and finishing"
+  },
+  {
+    "key": "43910",
+    "value": "Roofing activities"
+  },
+  {
+    "key": "43991",
+    "value": "Scaffold erection"
+  },
+  {
+    "key": "43999",
+    "value": "Other specialised construction activities n.e.c."
+  },
+  {
+    "key": "Section G",
+    "value": "Wholesale and retail trade; repair of motor vehicles and motorcycles"
+  },
+  {
+    "key": "45111",
+    "value": "Sale of new cars and light motor vehicles"
+  },
+  {
+    "key": "45112",
+    "value": "Sale of used cars and light motor vehicles"
+  },
+  {
+    "key": "45190",
+    "value": "Sale of other motor vehicles"
+  },
+  {
+    "key": "45200",
+    "value": "Maintenance and repair of motor vehicles"
+  },
+  {
+    "key": "45310",
+    "value": "Wholesale trade of motor vehicle parts and accessories"
+  },
+  {
+    "key": "45320",
+    "value": "Retail trade of motor vehicle parts and accessories"
+  },
+  {
+    "key": "45400",
+    "value": "Sale, maintenance and repair of motorcycles and related parts and accessories"
+  },
+  {
+    "key": "46110",
+    "value": "Agents selling agricultural raw materials, livestock, textile raw materials and semi-finished goods"
+  },
+  {
+    "key": "46120",
+    "value": "Agents involved in the sale of fuels, ores, metals and industrial chemicals"
+  },
+  {
+    "key": "46130",
+    "value": "Agents involved in the sale of timber and building materials"
+  },
+  {
+    "key": "46140",
+    "value": "Agents involved in the sale of machinery, industrial equipment, ships and aircraft"
+  },
+  {
+    "key": "46150",
+    "value": "Agents involved in the sale of furniture, household goods, hardware and ironmongery"
+  },
+  {
+    "key": "46160",
+    "value": "Agents involved in the sale of textiles, clothing, fur, footwear and leather goods"
+  },
+  {
+    "key": "46170",
+    "value": "Agents involved in the sale of food, beverages and tobacco"
+  },
+  {
+    "key": "46180",
+    "value": "Agents specialised in the sale of other particular products"
+  },
+  {
+    "key": "46190",
+    "value": "Agents involved in the sale of a variety of goods"
+  },
+  {
+    "key": "46210",
+    "value": "Wholesale of grain, unmanufactured tobacco, seeds and animal feeds"
+  },
+  {
+    "key": "46220",
+    "value": "Wholesale of flowers and plants"
+  },
+  {
+    "key": "46230",
+    "value": "Wholesale of live animals"
+  },
+  {
+    "key": "46240",
+    "value": "Wholesale of hides, skins and leather"
+  },
+  {
+    "key": "46310",
+    "value": "Wholesale of fruit and vegetables"
+  },
+  {
+    "key": "46320",
+    "value": "Wholesale of meat and meat products"
+  },
+  {
+    "key": "46330",
+    "value": "Wholesale of dairy products, eggs and edible oils and fats"
+  },
+  {
+    "key": "46341",
+    "value": "Wholesale of fruit and vegetable juices, mineral water and soft drinks"
+  },
+  {
+    "key": "46342",
+    "value": "Wholesale of wine, beer, spirits and other alcoholic beverages"
+  },
+  {
+    "key": "46350",
+    "value": "Wholesale of tobacco products"
+  },
+  {
+    "key": "46360",
+    "value": "Wholesale of sugar and chocolate and sugar confectionery"
+  },
+  {
+    "key": "46370",
+    "value": "Wholesale of coffee, tea, cocoa and spices"
+  },
+  {
+    "key": "46380",
+    "value": "Wholesale of other food, including fish, crustaceans and molluscs"
+  },
+  {
+    "key": "46390",
+    "value": "Non-specialised wholesale of food, beverages and tobacco"
+  },
+  {
+    "key": "46410",
+    "value": "Wholesale of textiles"
+  },
+  {
+    "key": "46420",
+    "value": "Wholesale of clothing and footwear"
+  },
+  {
+    "key": "46431",
+    "value": "Wholesale of audio tapes, records, CDs and video tapes and the equipment on which these are played"
+  },
+  {
+    "key": "46439",
+    "value": "Wholesale of radio, television goods & electrical household appliances (other than records, tapes, CD's & video tapes and the equipment used for playing them)"
+  },
+  {
+    "key": "46440",
+    "value": "Wholesale of china and glassware and cleaning materials"
+  },
+  {
+    "key": "46450",
+    "value": "Wholesale of perfume and cosmetics"
+  },
+  {
+    "key": "46460",
+    "value": "Wholesale of pharmaceutical goods"
+  },
+  {
+    "key": "46470",
+    "value": "Wholesale of furniture, carpets and lighting equipment"
+  },
+  {
+    "key": "46480",
+    "value": "Wholesale of watches and jewellery"
+  },
+  {
+    "key": "46491",
+    "value": "Wholesale of musical instruments"
+  },
+  {
+    "key": "46499",
+    "value": "Wholesale of household goods (other than musical instruments) n.e.c"
+  },
+  {
+    "key": "46510",
+    "value": "Wholesale of computers, computer peripheral equipment and software"
+  },
+  {
+    "key": "46520",
+    "value": "Wholesale of electronic and telecommunications equipment and parts"
+  },
+  {
+    "key": "46610",
+    "value": "Wholesale of agricultural machinery, equipment and supplies"
+  },
+  {
+    "key": "46620",
+    "value": "Wholesale of machine tools"
+  },
+  {
+    "key": "46630",
+    "value": "Wholesale of mining, construction and civil engineering machinery"
+  },
+  {
+    "key": "46640",
+    "value": "Wholesale of machinery for the textile industry and of sewing and knitting machines"
+  },
+  {
+    "key": "46650",
+    "value": "Wholesale of office furniture"
+  },
+  {
+    "key": "46660",
+    "value": "Wholesale of other office machinery and equipment"
+  },
+  {
+    "key": "46690",
+    "value": "Wholesale of other machinery and equipment"
+  },
+  {
+    "key": "46711",
+    "value": "Wholesale of petroleum and petroleum products"
+  },
+  {
+    "key": "46719",
+    "value": "Wholesale of other fuels and related products"
+  },
+  {
+    "key": "46720",
+    "value": "Wholesale of metals and metal ores"
+  },
+  {
+    "key": "46730",
+    "value": "Wholesale of wood, construction materials and sanitary equipment"
+  },
+  {
+    "key": "46740",
+    "value": "Wholesale of hardware, plumbing and heating equipment and supplies"
+  },
+  {
+    "key": "46750",
+    "value": "Wholesale of chemical products"
+  },
+  {
+    "key": "46760",
+    "value": "Wholesale of other intermediate products"
+  },
+  {
+    "key": "46770",
+    "value": "Wholesale of waste and scrap"
+  },
+  {
+    "key": "46900",
+    "value": "Non-specialised wholesale trade"
+  },
+  {
+    "key": "47110",
+    "value": "Retail sale in non-specialised stores with food, beverages or tobacco predominating"
+  },
+  {
+    "key": "47190",
+    "value": "Other retail sale in non-specialised stores"
+  },
+  {
+    "key": "47210",
+    "value": "Retail sale of fruit and vegetables in specialised stores"
+  },
+  {
+    "key": "47220",
+    "value": "Retail sale of meat and meat products in specialised stores"
+  },
+  {
+    "key": "47230",
+    "value": "Retail sale of fish, crustaceans and molluscs in specialised stores"
+  },
+  {
+    "key": "47240",
+    "value": "Retail sale of bread, cakes, flour confectionery and sugar confectionery in specialised stores"
+  },
+  {
+    "key": "47250",
+    "value": "Retail sale of beverages in specialised stores"
+  },
+  {
+    "key": "47260",
+    "value": "Retail sale of tobacco products in specialised stores"
+  },
+  {
+    "key": "47290",
+    "value": "Other retail sale of food in specialised stores"
+  },
+  {
+    "key": "47300",
+    "value": "Retail sale of automotive fuel in specialised stores"
+  },
+  {
+    "key": "47410",
+    "value": "Retail sale of computers, peripheral units and software in specialised stores"
+  },
+  {
+    "key": "47421",
+    "value": "Retail sale of mobile telephones"
+  },
+  {
+    "key": "47429",
+    "value": "Retail sale of telecommunications equipment other than mobile telephones"
+  },
+  {
+    "key": "47430",
+    "value": "Retail sale of audio and video equipment in specialised stores"
+  },
+  {
+    "key": "47510",
+    "value": "Retail sale of textiles in specialised stores"
+  },
+  {
+    "key": "47520",
+    "value": "Retail sale of hardware, paints and glass in specialised stores"
+  },
+  {
+    "key": "47530",
+    "value": "Retail sale of carpets, rugs, wall and floor coverings in specialised stores"
+  },
+  {
+    "key": "47540",
+    "value": "Retail sale of electrical household appliances in specialised stores"
+  },
+  {
+    "key": "47591",
+    "value": "Retail sale of musical instruments and scores"
+  },
+  {
+    "key": "47599",
+    "value": "Retail of furniture, lighting, and similar (not musical instruments or scores) in specialised store"
+  },
+  {
+    "key": "47610",
+    "value": "Retail sale of books in specialised stores"
+  },
+  {
+    "key": "47620",
+    "value": "Retail sale of newspapers and stationery in specialised stores"
+  },
+  {
+    "key": "47630",
+    "value": "Retail sale of music and video recordings in specialised stores"
+  },
+  {
+    "key": "47640",
+    "value": "Retail sale of sports goods, fishing gear, camping goods, boats and bicycles"
+  },
+  {
+    "key": "47650",
+    "value": "Retail sale of games and toys in specialised stores"
+  },
+  {
+    "key": "47710",
+    "value": "Retail sale of clothing in specialised stores"
+  },
+  {
+    "key": "47721",
+    "value": "Retail sale of footwear in specialised stores"
+  },
+  {
+    "key": "47722",
+    "value": "Retail sale of leather goods in specialised stores"
+  },
+  {
+    "key": "47730",
+    "value": "Dispensing chemist in specialised stores"
+  },
+  {
+    "key": "47741",
+    "value": "Retail sale of hearing aids"
+  },
+  {
+    "key": "47749",
+    "value": "Retail sale of medical and orthopaedic goods in specialised stores (not incl. hearing aids) n.e.c."
+  },
+  {
+    "key": "47750",
+    "value": "Retail sale of cosmetic and toilet articles in specialised stores"
+  },
+  {
+    "key": "47760",
+    "value": "Retail sale of flowers, plants, seeds, fertilizers, pet animals and pet food in specialised stores"
+  },
+  {
+    "key": "47770",
+    "value": "Retail sale of watches and jewellery in specialised stores"
+  },
+  {
+    "key": "47781",
+    "value": "Retail sale in commercial art galleries"
+  },
+  {
+    "key": "47782",
+    "value": "Retail sale by opticians"
+  },
+  {
+    "key": "47789",
+    "value": "Other retail sale of new goods in specialised stores (not commercial art galleries and opticians)"
+  },
+  {
+    "key": "47791",
+    "value": "Retail sale of antiques including antique books in stores"
+  },
+  {
+    "key": "47799",
+    "value": "Retail sale of other second-hand goods in stores (not incl. antiques)"
+  },
+  {
+    "key": "47810",
+    "value": "Retail sale via stalls and markets of food, beverages and tobacco products"
+  },
+  {
+    "key": "47820",
+    "value": "Retail sale via stalls and markets of textiles, clothing and footwear"
+  },
+  {
+    "key": "47890",
+    "value": "Retail sale via stalls and markets of other goods"
+  },
+  {
+    "key": "47910",
+    "value": "Retail sale via mail order houses or via Internet"
+  },
+  {
+    "key": "47990",
+    "value": "Other retail sale not in stores, stalls or markets"
+  },
+  {
+    "key": "Section H",
+    "value": "Transportation and storage"
+  },
+  {
+    "key": "49100",
+    "value": "Passenger rail transport, interurban"
+  },
+  {
+    "key": "49200",
+    "value": "Freight rail transport"
+  },
+  {
+    "key": "49311",
+    "value": "Urban and suburban passenger railway transportation by underground, metro and similar systems"
+  },
+  {
+    "key": "49319",
+    "value": "Other urban, suburban or metropolitan passenger land transport (not underground, metro or similar)"
+  },
+  {
+    "key": "49320",
+    "value": "Taxi operation"
+  },
+  {
+    "key": "49390",
+    "value": "Other passenger land transport"
+  },
+  {
+    "key": "49410",
+    "value": "Freight transport by road"
+  },
+  {
+    "key": "49420",
+    "value": "Removal services"
+  },
+  {
+    "key": "49500",
+    "value": "Transport via pipeline"
+  },
+  {
+    "key": "50100",
+    "value": "Sea and coastal passenger water transport"
+  },
+  {
+    "key": "50200",
+    "value": "Sea and coastal freight water transport"
+  },
+  {
+    "key": "50300",
+    "value": "Inland passenger water transport"
+  },
+  {
+    "key": "50400",
+    "value": "Inland freight water transport"
+  },
+  {
+    "key": "51101",
+    "value": "Scheduled passenger air transport"
+  },
+  {
+    "key": "51102",
+    "value": "Non-scheduled passenger air transport"
+  },
+  {
+    "key": "51210",
+    "value": "Freight air transport"
+  },
+  {
+    "key": "51220",
+    "value": "Space transport"
+  },
+  {
+    "key": "52101",
+    "value": "Operation of warehousing and storage facilities for water transport activities"
+  },
+  {
+    "key": "52102",
+    "value": "Operation of warehousing and storage facilities for air transport activities"
+  },
+  {
+    "key": "52103",
+    "value": "Operation of warehousing and storage facilities for land transport activities"
+  },
+  {
+    "key": "52211",
+    "value": "Operation of rail freight terminals"
+  },
+  {
+    "key": "52212",
+    "value": "Operation of rail passenger facilities at railway stations"
+  },
+  {
+    "key": "52213",
+    "value": "Operation of bus and coach passenger facilities at bus and coach stations"
+  },
+  {
+    "key": "52219",
+    "value": "Other service activities incidental to land transportation, n.e.c."
+  },
+  {
+    "key": "52220",
+    "value": "Service activities incidental to water transportation"
+  },
+  {
+    "key": "52230",
+    "value": "Service activities incidental to air transportation"
+  },
+  {
+    "key": "52241",
+    "value": "Cargo handling for water transport activities"
+  },
+  {
+    "key": "52242",
+    "value": "Cargo handling for air transport activities"
+  },
+  {
+    "key": "52243",
+    "value": "Cargo handling for land transport activities"
+  },
+  {
+    "key": "52290",
+    "value": "Other transportation support activities"
+  },
+  {
+    "key": "53100",
+    "value": "Postal activities under universal service obligation"
+  },
+  {
+    "key": "53201",
+    "value": "Licensed carriers"
+  },
+  {
+    "key": "53202",
+    "value": "Unlicensed carriers"
+  },
+  {
+    "key": "Section I",
+    "value": "Accommodation and food service activities"
+  },
+  {
+    "key": "55100",
+    "value": "Hotels and similar accommodation"
+  },
+  {
+    "key": "55201",
+    "value": "Holiday centres and villages"
+  },
+  {
+    "key": "55202",
+    "value": "Youth hostels"
+  },
+  {
+    "key": "55209",
+    "value": "Other holiday and other collective accommodation"
+  },
+  {
+    "key": "55300",
+    "value": "Recreational vehicle parks, trailer parks and camping grounds"
+  },
+  {
+    "key": "55900",
+    "value": "Other accommodation"
+  },
+  {
+    "key": "56101",
+    "value": "Licenced restaurants"
+  },
+  {
+    "key": "56102",
+    "value": "Unlicenced restaurants and cafes"
+  },
+  {
+    "key": "56103",
+    "value": "Take-away food shops and mobile food stands"
+  },
+  {
+    "key": "56210",
+    "value": "Event catering activities"
+  },
+  {
+    "key": "56290",
+    "value": "Other food services"
+  },
+  {
+    "key": "56301",
+    "value": "Licenced clubs"
+  },
+  {
+    "key": "56302",
+    "value": "Public houses and bars"
+  },
+  {
+    "key": "Section J",
+    "value": "Information and communication"
+  },
+  {
+    "key": "58110",
+    "value": "Book publishing"
+  },
+  {
+    "key": "58120",
+    "value": "Publishing of directories and mailing lists"
+  },
+  {
+    "key": "58130",
+    "value": "Publishing of newspapers"
+  },
+  {
+    "key": "58141",
+    "value": "Publishing of learned journals"
+  },
+  {
+    "key": "58142",
+    "value": "Publishing of consumer and business journals and periodicals"
+  },
+  {
+    "key": "58190",
+    "value": "Other publishing activities"
+  },
+  {
+    "key": "58210",
+    "value": "Publishing of computer games"
+  },
+  {
+    "key": "58290",
+    "value": "Other software publishing"
+  },
+  {
+    "key": "59111",
+    "value": "Motion picture production activities"
+  },
+  {
+    "key": "59112",
+    "value": "Video production activities"
+  },
+  {
+    "key": "59113",
+    "value": "Television programme production activities"
+  },
+  {
+    "key": "59120",
+    "value": "Motion picture, video and television programme post-production activities"
+  },
+  {
+    "key": "59131",
+    "value": "Motion picture distribution activities"
+  },
+  {
+    "key": "59132",
+    "value": "Video distribution activities"
+  },
+  {
+    "key": "59133",
+    "value": "Television programme distribution activities"
+  },
+  {
+    "key": "59140",
+    "value": "Motion picture projection activities"
+  },
+  {
+    "key": "59200",
+    "value": "Sound recording and music publishing activities"
+  },
+  {
+    "key": "60100",
+    "value": "Radio broadcasting"
+  },
+  {
+    "key": "60200",
+    "value": "Television programming and broadcasting activities"
+  },
+  {
+    "key": "61100",
+    "value": "Wired telecommunications activities"
+  },
+  {
+    "key": "61200",
+    "value": "Wireless telecommunications activities"
+  },
+  {
+    "key": "61300",
+    "value": "Satellite telecommunications activities"
+  },
+  {
+    "key": "61900",
+    "value": "Other telecommunications activities"
+  },
+  {
+    "key": "62011",
+    "value": "Ready-made interactive leisure and entertainment software development"
+  },
+  {
+    "key": "62012",
+    "value": "Business and domestic software development"
+  },
+  {
+    "key": "62020",
+    "value": "Information technology consultancy activities"
+  },
+  {
+    "key": "62030",
+    "value": "Computer facilities management activities"
+  },
+  {
+    "key": "62090",
+    "value": "Other information technology service activities"
+  },
+  {
+    "key": "63110",
+    "value": "Data processing, hosting and related activities"
+  },
+  {
+    "key": "63120",
+    "value": "Web portals"
+  },
+  {
+    "key": "63910",
+    "value": "News agency activities"
+  },
+  {
+    "key": "63990",
+    "value": "Other information service activities n.e.c."
+  },
+  {
+    "key": "Section K",
+    "value": "Financial and insurance activities"
+  },
+  {
+    "key": "64110",
+    "value": "Central banking"
+  },
+  {
+    "key": "64191",
+    "value": "Banks"
+  },
+  {
+    "key": "64192",
+    "value": "Building societies"
+  },
+  {
+    "key": "64201",
+    "value": "Activities of agricultural holding companies"
+  },
+  {
+    "key": "64202",
+    "value": "Activities of production holding companies"
+  },
+  {
+    "key": "64203",
+    "value": "Activities of construction holding companies"
+  },
+  {
+    "key": "64204",
+    "value": "Activities of distribution holding companies"
+  },
+  {
+    "key": "64205",
+    "value": "Activities of financial services holding companies"
+  },
+  {
+    "key": "64209",
+    "value": "Activities of other holding companies n.e.c."
+  },
+  {
+    "key": "64301",
+    "value": "Activities of investment trusts"
+  },
+  {
+    "key": "64302",
+    "value": "Activities of unit trusts"
+  },
+  {
+    "key": "64303",
+    "value": "Activities of venture and development capital companies"
+  },
+  {
+    "key": "64304",
+    "value": "Activities of open-ended investment companies"
+  },
+  {
+    "key": "64305",
+    "value": "Activities of property unit trusts"
+  },
+  {
+    "key": "64306",
+    "value": "Activities of real estate investment trusts"
+  },
+  {
+    "key": "64910",
+    "value": "Financial leasing"
+  },
+  {
+    "key": "64921",
+    "value": "Credit granting by non-deposit taking finance houses and other specialist consumer credit grantors"
+  },
+  {
+    "key": "64922",
+    "value": "Activities of mortgage finance companies"
+  },
+  {
+    "key": "64929",
+    "value": "Other credit granting n.e.c."
+  },
+  {
+    "key": "64991",
+    "value": "Security dealing on own account"
+  },
+  {
+    "key": "64992",
+    "value": "Factoring"
+  },
+  {
+    "key": "64999",
+    "value": "Financial intermediation not elsewhere classified"
+  },
+  {
+    "key": "65110",
+    "value": "Life insurance"
+  },
+  {
+    "key": "65120",
+    "value": "Non-life insurance"
+  },
+  {
+    "key": "65201",
+    "value": "Life reinsurance"
+  },
+  {
+    "key": "65202",
+    "value": "Non-life reinsurance"
+  },
+  {
+    "key": "65300",
+    "value": "Pension funding"
+  },
+  {
+    "key": "66110",
+    "value": "Administration of financial markets"
+  },
+  {
+    "key": "66120",
+    "value": "Security and commodity contracts dealing activities"
+  },
+  {
+    "key": "66190",
+    "value": "Activities auxiliary to financial intermediation n.e.c."
+  },
+  {
+    "key": "66210",
+    "value": "Risk and damage evaluation"
+  },
+  {
+    "key": "66220",
+    "value": "Activities of insurance agents and brokers"
+  },
+  {
+    "key": "66290",
+    "value": "Other activities auxiliary to insurance and pension funding"
+  },
+  {
+    "key": "66300",
+    "value": "Fund management activities"
+  },
+  {
+    "key": "Section L",
+    "value": "Real estate activities"
+  },
+  {
+    "key": "68100",
+    "value": "Buying and selling of own real estate"
+  },
+  {
+    "key": "68201",
+    "value": "Renting and operating of Housing Association real estate"
+  },
+  {
+    "key": "68202",
+    "value": "Letting and operating of conference and exhibition centres"
+  },
+  {
+    "key": "68209",
+    "value": "Other letting and operating of own or leased real estate"
+  },
+  {
+    "key": "68310",
+    "value": "Real estate agencies"
+  },
+  {
+    "key": "68320",
+    "value": "Management of real estate on a fee or contract basis"
+  },
+  {
+    "key": "Section M",
+    "value": "Professional, scientific and technical activities"
+  },
+  {
+    "key": "69101",
+    "value": "Barristers at law"
+  },
+  {
+    "key": "69102",
+    "value": "Solicitors"
+  },
+  {
+    "key": "69109",
+    "value": "Activities of patent and copyright agents; other legal activities n.e.c."
+  },
+  {
+    "key": "69201",
+    "value": "Accounting and auditing activities"
+  },
+  {
+    "key": "69202",
+    "value": "Bookkeeping activities"
+  },
+  {
+    "key": "69203",
+    "value": "Tax consultancy"
+  },
+  {
+    "key": "70100",
+    "value": "Activities of head offices"
+  },
+  {
+    "key": "70210",
+    "value": "Public relations and communications activities"
+  },
+  {
+    "key": "70221",
+    "value": "Financial management"
+  },
+  {
+    "key": "70229",
+    "value": "Management consultancy activities other than financial management"
+  },
+  {
+    "key": "71111",
+    "value": "Architectural activities"
+  },
+  {
+    "key": "71112",
+    "value": "Urban planning and landscape architectural activities"
+  },
+  {
+    "key": "71121",
+    "value": "Engineering design activities for industrial process and production"
+  },
+  {
+    "key": "71122",
+    "value": "Engineering related scientific and technical consulting activities"
+  },
+  {
+    "key": "71129",
+    "value": "Other engineering activities"
+  },
+  {
+    "key": "71200",
+    "value": "Technical testing and analysis"
+  },
+  {
+    "key": "72110",
+    "value": "Research and experimental development on biotechnology"
+  },
+  {
+    "key": "72190",
+    "value": "Other research and experimental development on natural sciences and engineering"
+  },
+  {
+    "key": "72200",
+    "value": "Research and experimental development on social sciences and humanities"
+  },
+  {
+    "key": "73110",
+    "value": "Advertising agencies"
+  },
+  {
+    "key": "73120",
+    "value": "Media representation services"
+  },
+  {
+    "key": "73200",
+    "value": "Market research and public opinion polling"
+  },
+  {
+    "key": "74100",
+    "value": "specialised design activities"
+  },
+  {
+    "key": "74201",
+    "value": "Portrait photographic activities"
+  },
+  {
+    "key": "74202",
+    "value": "Other specialist photography"
+  },
+  {
+    "key": "74203",
+    "value": "Film processing"
+  },
+  {
+    "key": "74209",
+    "value": "Photographic activities not elsewhere classified"
+  },
+  {
+    "key": "74300",
+    "value": "Translation and interpretation activities"
+  },
+  {
+    "key": "74901",
+    "value": "Environmental consulting activities"
+  },
+  {
+    "key": "74902",
+    "value": "Quantity surveying activities"
+  },
+  {
+    "key": "74909",
+    "value": "Other professional, scientific and technical activities n.e.c."
+  },
+  {
+    "key": "74990",
+    "value": "Non-trading company"
+  },
+  {
+    "key": "75000",
+    "value": "Veterinary activities"
+  },
+  {
+    "key": "Section N",
+    "value": "Administrative and support service activities"
+  },
+  {
+    "key": "77110",
+    "value": "Renting and leasing of cars and light motor vehicles"
+  },
+  {
+    "key": "77120",
+    "value": "Renting and leasing of trucks and other heavy vehicles"
+  },
+  {
+    "key": "77210",
+    "value": "Renting and leasing of recreational and sports goods"
+  },
+  {
+    "key": "77220",
+    "value": "Renting of video tapes and disks"
+  },
+  {
+    "key": "77291",
+    "value": "Renting and leasing of media entertainment equipment"
+  },
+  {
+    "key": "77299",
+    "value": "Renting and leasing of other personal and household goods"
+  },
+  {
+    "key": "77310",
+    "value": "Renting and leasing of agricultural machinery and equipment"
+  },
+  {
+    "key": "77320",
+    "value": "Renting and leasing of construction and civil engineering machinery and equipment"
+  },
+  {
+    "key": "77330",
+    "value": "Renting and leasing of office machinery and equipment (including computers)"
+  },
+  {
+    "key": "77341",
+    "value": "Renting and leasing of passenger water transport equipment"
+  },
+  {
+    "key": "77342",
+    "value": "Renting and leasing of freight water transport equipment"
+  },
+  {
+    "key": "77351",
+    "value": "Renting and leasing of air passenger transport equipment"
+  },
+  {
+    "key": "77352",
+    "value": "Renting and leasing of freight air transport equipment"
+  },
+  {
+    "key": "77390",
+    "value": "Renting and leasing of other machinery, equipment and tangible goods n.e.c."
+  },
+  {
+    "key": "77400",
+    "value": "Leasing of intellectual property and similar products, except copyright works"
+  },
+  {
+    "key": "78101",
+    "value": "Motion picture, television and other theatrical casting activities"
+  },
+  {
+    "key": "78109",
+    "value": "Other activities of employment placement agencies"
+  },
+  {
+    "key": "78200",
+    "value": "Temporary employment agency activities"
+  },
+  {
+    "key": "78300",
+    "value": "Human resources provision and management of human resources functions"
+  },
+  {
+    "key": "79110",
+    "value": "Travel agency activities"
+  },
+  {
+    "key": "79120",
+    "value": "Tour operator activities"
+  },
+  {
+    "key": "79901",
+    "value": "Activities of tourist guides"
+  },
+  {
+    "key": "79909",
+    "value": "Other reservation service activities n.e.c."
+  },
+  {
+    "key": "80100",
+    "value": "Private security activities"
+  },
+  {
+    "key": "80200",
+    "value": "Security systems service activities"
+  },
+  {
+    "key": "80300",
+    "value": "Investigation activities"
+  },
+  {
+    "key": "81100",
+    "value": "Combined facilities support activities"
+  },
+  {
+    "key": "81210",
+    "value": "General cleaning of buildings"
+  },
+  {
+    "key": "81221",
+    "value": "Window cleaning services"
+  },
+  {
+    "key": "81222",
+    "value": "Specialised cleaning services"
+  },
+  {
+    "key": "81223",
+    "value": "Furnace and chimney cleaning services"
+  },
+  {
+    "key": "81229",
+    "value": "Other building and industrial cleaning activities"
+  },
+  {
+    "key": "81291",
+    "value": "Disinfecting and exterminating services"
+  },
+  {
+    "key": "81299",
+    "value": "Other cleaning services"
+  },
+  {
+    "key": "81300",
+    "value": "Landscape service activities"
+  },
+  {
+    "key": "82110",
+    "value": "Combined office administrative service activities"
+  },
+  {
+    "key": "82190",
+    "value": "Photocopying, document preparation and other specialised office support activities"
+  },
+  {
+    "key": "82200",
+    "value": "Activities of call centres"
+  },
+  {
+    "key": "82301",
+    "value": "Activities of exhibition and fair organisers"
+  },
+  {
+    "key": "82302",
+    "value": "Activities of conference organisers"
+  },
+  {
+    "key": "82911",
+    "value": "Activities of collection agencies"
+  },
+  {
+    "key": "82912",
+    "value": "Activities of credit bureaus"
+  },
+  {
+    "key": "82920",
+    "value": "Packaging activities"
+  },
+  {
+    "key": "82990",
+    "value": "Other business support service activities n.e.c."
+  },
+  {
+    "key": "Section O",
+    "value": "Public administration and defence; compulsory social security"
+  },
+  {
+    "key": "84110",
+    "value": "General public administration activities"
+  },
+  {
+    "key": "84120",
+    "value": "Regulation of health care, education, cultural and other social services, not incl. social security"
+  },
+  {
+    "key": "84130",
+    "value": "Regulation of and contribution to more efficient operation of businesses"
+  },
+  {
+    "key": "84210",
+    "value": "Foreign affairs"
+  },
+  {
+    "key": "84220",
+    "value": "Defence activities"
+  },
+  {
+    "key": "84230",
+    "value": "Justice and judicial activities"
+  },
+  {
+    "key": "84240",
+    "value": "Public order and safety activities"
+  },
+  {
+    "key": "84250",
+    "value": "Fire service activities"
+  },
+  {
+    "key": "84300",
+    "value": "Compulsory social security activities"
+  },
+  {
+    "key": "Section P",
+    "value": "Education"
+  },
+  {
+    "key": "85100",
+    "value": "Pre-primary education"
+  },
+  {
+    "key": "85200",
+    "value": "Primary education"
+  },
+  {
+    "key": "85310",
+    "value": "General secondary education"
+  },
+  {
+    "key": "85320",
+    "value": "Technical and vocational secondary education"
+  },
+  {
+    "key": "85410",
+    "value": "Post-secondary non-tertiary education"
+  },
+  {
+    "key": "85421",
+    "value": "First-degree level higher education"
+  },
+  {
+    "key": "85422",
+    "value": "Post-graduate level higher education"
+  },
+  {
+    "key": "85510",
+    "value": "Sports and recreation education"
+  },
+  {
+    "key": "85520",
+    "value": "Cultural education"
+  },
+  {
+    "key": "85530",
+    "value": "Driving school activities"
+  },
+  {
+    "key": "85590",
+    "value": "Other education n.e.c."
+  },
+  {
+    "key": "85600",
+    "value": "Educational support services"
+  },
+  {
+    "key": "Section Q",
+    "value": "Human health and social work activities"
+  },
+  {
+    "key": "86101",
+    "value": "Hospital activities"
+  },
+  {
+    "key": "86102",
+    "value": "Medical nursing home activities"
+  },
+  {
+    "key": "86210",
+    "value": "General medical practice activities"
+  },
+  {
+    "key": "86220",
+    "value": "Specialists medical practice activities"
+  },
+  {
+    "key": "86230",
+    "value": "Dental practice activities"
+  },
+  {
+    "key": "86900",
+    "value": "Other human health activities"
+  },
+  {
+    "key": "87100",
+    "value": "Residential nursing care facilities"
+  },
+  {
+    "key": "87200",
+    "value": "Residential care activities for learning difficulties, mental health and substance abuse"
+  },
+  {
+    "key": "87300",
+    "value": "Residential care activities for the elderly and disabled"
+  },
+  {
+    "key": "87900",
+    "value": "Other residential care activities n.e.c."
+  },
+  {
+    "key": "88100",
+    "value": "Social work activities without accommodation for the elderly and disabled"
+  },
+  {
+    "key": "88910",
+    "value": "Child day-care activities"
+  },
+  {
+    "key": "88990",
+    "value": "Other social work activities without accommodation n.e.c."
+  },
+  {
+    "key": "Section R",
+    "value": "Arts, entertainment and recreation"
+  },
+  {
+    "key": "90010",
+    "value": "Performing arts"
+  },
+  {
+    "key": "90020",
+    "value": "Support activities to performing arts"
+  },
+  {
+    "key": "90030",
+    "value": "Artistic creation"
+  },
+  {
+    "key": "90040",
+    "value": "Operation of arts facilities"
+  },
+  {
+    "key": "91011",
+    "value": "Library activities"
+  },
+  {
+    "key": "91012",
+    "value": "Archives activities"
+  },
+  {
+    "key": "91020",
+    "value": "Museums activities"
+  },
+  {
+    "key": "91030",
+    "value": "Operation of historical sites and buildings and similar visitor attractions"
+  },
+  {
+    "key": "91040",
+    "value": "Botanical and zoological gardens and nature reserves activities"
+  },
+  {
+    "key": "92000",
+    "value": "Gambling and betting activities"
+  },
+  {
+    "key": "93110",
+    "value": "Operation of sports facilities"
+  },
+  {
+    "key": "93120",
+    "value": "Activities of sport clubs"
+  },
+  {
+    "key": "93130",
+    "value": "Fitness facilities"
+  },
+  {
+    "key": "93191",
+    "value": "Activities of racehorse owners"
+  },
+  {
+    "key": "93199",
+    "value": "Other sports activities"
+  },
+  {
+    "key": "93210",
+    "value": "Activities of amusement parks and theme parks"
+  },
+  {
+    "key": "93290",
+    "value": "Other amusement and recreation activities n.e.c."
+  },
+  {
+    "key": "Section S",
+    "value": "Other service activities"
+  },
+  {
+    "key": "94110",
+    "value": "Activities of business and employers membership organisations"
+  },
+  {
+    "key": "94120",
+    "value": "Activities of professional membership organisations"
+  },
+  {
+    "key": "94200",
+    "value": "Activities of trade unions"
+  },
+  {
+    "key": "94910",
+    "value": "Activities of religious organisations"
+  },
+  {
+    "key": "94920",
+    "value": "Activities of political organisations"
+  },
+  {
+    "key": "94990",
+    "value": "Activities of other membership organisations n.e.c."
+  },
+  {
+    "key": "95110",
+    "value": "Repair of computers and peripheral equipment"
+  },
+  {
+    "key": "95120",
+    "value": "Repair of communication equipment"
+  },
+  {
+    "key": "95210",
+    "value": "Repair of consumer electronics"
+  },
+  {
+    "key": "95220",
+    "value": "Repair of household appliances and home and garden equipment"
+  },
+  {
+    "key": "95230",
+    "value": "Repair of footwear and leather goods"
+  },
+  {
+    "key": "95240",
+    "value": "Repair of furniture and home furnishings"
+  },
+  {
+    "key": "95250",
+    "value": "Repair of watches, clocks and jewellery"
+  },
+  {
+    "key": "95290",
+    "value": "Repair of personal and household goods n.e.c."
+  },
+  {
+    "key": "96010",
+    "value": "Washing and (dry-)cleaning of textile and fur products"
+  },
+  {
+    "key": "96020",
+    "value": "Hairdressing and other beauty treatment"
+  },
+  {
+    "key": "96030",
+    "value": "Funeral and related activities"
+  },
+  {
+    "key": "96040",
+    "value": "Physical well-being activities"
+  },
+  {
+    "key": "96090",
+    "value": "Other service activities n.e.c."
+  },
+  {
+    "key": "Section T",
+    "value": "Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use"
+  },
+  {
+    "key": "97000",
+    "value": "Activities of households as employers of domestic personnel"
+  },
+  {
+    "key": "98000",
+    "value": "Residents property management"
+  },
+  {
+    "key": "98100",
+    "value": "Undifferentiated goods-producing activities of private households for own use"
+  },
+  {
+    "key": "98200",
+    "value": "Undifferentiated service-producing activities of private households for own use"
+  },
+  {
+    "key": "Section U",
+    "value": "Activities of extraterritorial organisations and bodies"
+  },
+  {
+    "key": "99000",
+    "value": "Activities of extraterritorial organisations and bodies"
+  },
+  {
+    "key": "99999",
+    "value": "Dormant Company"
+  }
+]
