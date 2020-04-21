@@ -1,5 +1,7 @@
 package com.janaldous.sponsorship.sponsor;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -14,30 +16,50 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 import org.hibernate.query.criteria.internal.predicate.MemberOfPredicate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
+import com.janaldous.sponsorship.checksponsor.CheckingSponsorRepository;
 import com.janaldous.sponsorship.companieshouse.data.CompanyHouseCompany;
 import com.janaldous.sponsorship.companieshouse.data.SIC;
+import com.janaldous.sponsorship.namecomparison.NameNormalizer;
 import com.janaldous.sponsorship.sponsor.data.ProcessStatus;
 import com.janaldous.sponsorship.sponsor.data.RelevantSponsor;
+import com.janaldous.sponsorship.sponsor.data.Sponsor;
 import com.janaldous.sponsorship.sponsor.data.Tier;
 import com.janaldous.sponsorship.sponsor.data.TierNum;
 import com.janaldous.sponsorship.sponsor.data.TierSub;
+import com.janaldous.sponsorship.webfacade.CheckedDto;
 
 @Service
 public class RelevantSponsorService implements IRelevantSponsorService {
 
-	private static final int PAGE_SIZE = 10;
+	private static final Logger log = LoggerFactory.getLogger(RelevantSponsorService.class);
+
+	private static final int PAGE_SIZE = 20;
 
 	@Autowired
 	private RelevantSponsorRepository relevantSponsorRepository;
+	
+	@Autowired
+	private CheckingSponsorRepository checkingSponsorRepository;
+	
+	@Autowired
+	private SponsorRepository sponsorRepository;
+	
+	@Autowired
+	private NameNormalizer normalizer;
 
 	private List<RelevantSponsor> cache;
 
 	@Autowired
 	private EntityManagerFactory entityManagerFactory;
+	
+	private LocalDateTime dueDate = LocalDateTime.of(2019, 12, 18, 0, 0);
+	
 
 	@Override
 	public List<RelevantSponsor> getNextBatch(int batchSize) {
@@ -53,47 +75,153 @@ public class RelevantSponsorService implements IRelevantSponsorService {
 	}
 
 	@Override
-	public List<CompanyResult> findAllRelevantSponsors(Optional<Integer> pageNumber) {
-		EntityManager entityManager = entityManagerFactory.createEntityManager();
-		CriteriaBuilder cb = entityManager.getCriteriaBuilder();
-
-		// find tier
-		CriteriaQuery<Tier> cqTier = cb.createQuery(Tier.class);
-	    Root<Tier> tierFrom = cqTier.from(Tier.class);
-	    cqTier.select(tierFrom)
-        	.where(cb.and(cb.equal(tierFrom.get("tier"), TierNum.TIER_2), 
-        			cb.equal(tierFrom.get("subTier"), TierSub.GENERAL)));
-	    Tier tier = entityManager.createQuery(cqTier).getSingleResult();
-
-	    CriteriaQuery<SIC> cqSic = cb.createQuery(SIC.class);
-	    Root<SIC> sicFrom = cqSic.from(SIC.class);
-	    cqSic.select(sicFrom).where(cb.equal(sicFrom.get("interested"), true));
-	    List<SIC> interestingSic = entityManager.createQuery(cqSic).getResultList();
-	    
-		CriteriaQuery<CompanyResult> cq = cb.createQuery(CompanyResult.class);
+	public List<CompanyResult> findAllRelevantSponsors(
+			Optional<Integer> pageNumber, Optional<Integer> pageSize) {
 		
-		Root<CompanyHouseCompany> chCompany = cq.from(CompanyHouseCompany.class);
-		Join<Object, Object> sponsor = chCompany.join("sponsor");
-		Root<RelevantSponsor> relevantSponsor = cq.from(RelevantSponsor.class);
-		Root<CheckingSponsor> checkingSponsor = cq.from(CheckingSponsor.class);
+		log.info("pageNumber = " + pageNumber.toString() + " pageSize = " + pageSize.toString());
+		EntityManager entityManager = entityManagerFactory
+				.createEntityManager();
+		try {
+			CriteriaBuilder cb = entityManager.getCriteriaBuilder();
 
-		Predicate predSponsor = cb.equal(relevantSponsor.get("sponsor"), sponsor);
-		Predicate predSuccess = cb.equal(relevantSponsor.get("status"), ProcessStatus.SUCCESS);
-		Predicate predTier2Gen = cb.isMember(tier, sponsor.get("tier"));
-		Predicate predChecking = cb.equal(checkingSponsor.get("sponsor"), sponsor);
-		Predicate[] preds = interestingSic.stream().map(x -> cb.isMember(x, chCompany.get("sic"))).toArray(MemberOfPredicate[]::new);
-		
-		cq.select(cb.construct(CompanyResult.class, 
-				chCompany, checkingSponsor))
-			.distinct(true)
-			.where(cb.and(cb.and(predSponsor, cb.and(cb.or(preds), predChecking)), cb.and(predSuccess, predTier2Gen)));
-		
-		TypedQuery<CompanyResult> typedQuery = entityManager.createQuery(cq);
-		if (pageNumber != null && pageNumber.isPresent()) {
-			int pageNo = pageNumber.get();
-			typedQuery.setFirstResult((pageNo-1) * PAGE_SIZE); 
-			typedQuery.setMaxResults(PAGE_SIZE);
+			// find tier
+			CriteriaQuery<Tier> cqTier = cb.createQuery(Tier.class);
+			Root<Tier> tierFrom = cqTier.from(Tier.class);
+			cqTier.select(tierFrom)
+					.where(cb.and(
+							cb.equal(tierFrom.get("tier"), TierNum.TIER_2),
+							cb.equal(tierFrom.get("subTier"), TierSub.GENERAL)));
+			Tier tier = entityManager.createQuery(cqTier).getSingleResult();
+
+			CriteriaQuery<SIC> cqSic = cb.createQuery(SIC.class);
+			Root<SIC> sicFrom = cqSic.from(SIC.class);
+			cqSic.select(sicFrom).where(
+					cb.equal(sicFrom.get("interested"), true));
+			List<SIC> interestingSic = entityManager.createQuery(cqSic)
+					.getResultList();
+
+			CriteriaQuery<CompanyResult> cq = cb
+					.createQuery(CompanyResult.class);
+
+			Root<CompanyHouseCompany> chCompany = cq
+					.from(CompanyHouseCompany.class);
+			Join<Object, Object> sponsor = chCompany.join("sponsor");
+			Root<RelevantSponsor> relevantSponsor = cq
+					.from(RelevantSponsor.class);
+			Root<CheckingSponsor> checkingSponsor = cq
+					.from(CheckingSponsor.class);
+
+			Predicate predSponsor = cb.equal(relevantSponsor.get("sponsor"),
+					sponsor);
+			Predicate predSuccess = cb.equal(relevantSponsor.get("status"),
+					ProcessStatus.SUCCESS);
+			Predicate predTier2Gen = cb.isMember(tier, sponsor.get("tier"));
+			Predicate predChecking = cb.equal(checkingSponsor.get("sponsor"),
+					sponsor);
+			Predicate[] preds = interestingSic.stream()
+					.map(x -> cb.isMember(x, chCompany.get("sic")))
+					.toArray(MemberOfPredicate[]::new);
+
+			cq.select(
+					cb.construct(CompanyResult.class, chCompany,
+							checkingSponsor))
+					.distinct(true)
+					.where(cb.and(
+							cb.and(predSponsor,
+									cb.and(cb.or(preds), predChecking)),
+							cb.and(predSuccess, predTier2Gen)));
+
+			TypedQuery<CompanyResult> typedQuery = entityManager
+					.createQuery(cq);
+			
+			int realPageSize = PAGE_SIZE;
+			if (pageSize.isPresent()) {
+				realPageSize = pageSize.get();
+			}
+			if (pageNumber != null && pageNumber.isPresent()) {
+				int pageNo = pageNumber.get();
+				typedQuery.setFirstResult((pageNo) * realPageSize);
+				typedQuery.setMaxResults(realPageSize);
+			}
+			return typedQuery.getResultList();
+		} catch (Exception e) {
+			log.error(e.getMessage(), e);
+		} finally {
+			entityManager.close();
 		}
-		return typedQuery.getResultList();
+		return null;
 	}
+
+	@Override
+	public CheckingSponsor checked(Long id, CheckedDto checked) {
+		log.info("id = " + id + " checked = " + checked.toString());
+
+		Optional<Sponsor> optSponsor = sponsorRepository.findById(id);
+		if (!optSponsor.isPresent()) {
+			throw new IllegalArgumentException("sponsor not found");
+		}
+		Sponsor sponsor = optSponsor.get();
+		List<CheckingSponsor> checkingSponsors = checkingSponsorRepository.findBySponsor(sponsor);
+		if (checkingSponsors.size() != 1) {
+			throw new IllegalArgumentException("checking sponsor not found");
+		}
+		CheckingSponsor checkingSponsor = checkingSponsors.get(0);
+		boolean isChecked = isChecked(checked);
+		checkingSponsor.setChecked(isChecked);
+		checkingSponsor.setApplied(checked.isApplied());
+		checkingSponsor.setIncorrectLikeness(checked.isIncorrectLikeness());
+		checkingSponsor.setCheckLater(checked.isCheckLater());
+		checkingSponsor.setInterestingIdea(checked.isInterestingIdea());
+		checkingSponsor.setNiceSite(checked.isNiceSite());
+		checkingSponsor.setNoCareers(checked.isNoCareers());
+		checkingSponsor.setCategories(checked.getCategories());
+		checkingSponsor.setOtherInfo(checked.getOtherInfo());
+		checkingSponsor.setNoTechJobs(checked.isNoTechJobs());
+		checkingSponsor.setNeedRightToWork(checked.isNeedRightToWork());
+		checkingSponsor.setAbroad(checked.isAbroad());
+		checkingSponsor.setAppliedByEmail(checked.isAppliedByEmail());
+		checkingSponsor.setNoOpenings(checked.isNoOpenings());
+		
+		return checkingSponsorRepository.save(checkingSponsor);
+	}
+
+	private boolean isChecked(CheckedDto checked) {
+		return checked.isApplied() || checked.isAppliedByEmail() || checked.isNoCareers() || checked.isNoTechJobs() || checked.isNeedRightToWork()
+				|| checked.isAbroad() || checked.isNoOpenings();
+	}
+	
+	@Override
+	public List<CompanyResult> getCompanyResultsWithSchedule(Optional<Integer> pageNumber, Optional<Integer> pageSize) {
+		List<CompanyResult> findAllRelevantSponsors = findAllRelevantSponsors(pageNumber, pageSize);
+		if (findAllRelevantSponsors == null) {
+			throw new IllegalStateException("cannot have null sponsors");
+		}
+		long notCheckedSponsors = findAllRelevantSponsors.stream().filter(x -> x.getChecking() != null && x.getChecking().getChecked() != null && !x.getChecking().getChecked()).count();
+		
+		long needToCheckSponsors = notCheckedSponsors / (Duration.between(LocalDateTime.now(), dueDate).toDays()*7);
+		
+		for (int i = 0, ntcsCtr = 0; i < findAllRelevantSponsors.size() && ntcsCtr < needToCheckSponsors; i++) {
+			if (!findAllRelevantSponsors.get(i).getChecking().getChecked()) {
+				findAllRelevantSponsors.get(i).setShouldCheckToday(true);
+				ntcsCtr++;
+			}
+		}
+		
+		return findAllRelevantSponsors.stream().map(x -> mapIncorrectLikeness(x, normalizer)).collect(Collectors.toList());
+	}
+	
+	static CompanyResult mapIncorrectLikeness(CompanyResult companyResult, NameNormalizer normalizer) {
+		boolean isEqual = false;
+		if (companyResult == null || companyResult.getCompany() == null || companyResult.getCompany().getCompanyHouseName() == null
+				|| companyResult.getChecking() == null || companyResult.getChecking().getSponsor() == null) {
+			throw new RuntimeException("null something");
+		} else {
+			String name1 = normalizer.normalize(companyResult.getCompany().getCompanyHouseName());
+			String name2 = normalizer.normalize(companyResult.getChecking().getSponsor().getName().trim());
+			isEqual = name1.equalsIgnoreCase(name2);
+		}
+		companyResult.setPossibleIncorrectLikeness(!isEqual);
+		return companyResult;
+	}
+	
 }

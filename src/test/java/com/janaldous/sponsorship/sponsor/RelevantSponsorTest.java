@@ -1,67 +1,83 @@
 package com.janaldous.sponsorship.sponsor;
 
-import java.util.List;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.context.annotation.Bean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
-import com.janaldous.sponsorship.checksponsor.CheckingSponsorRepository;
-import com.janaldous.sponsorship.sponsor.data.RelevantSponsor;
-import com.janaldous.sponsorship.sponsor.data.TierNum;
-import com.janaldous.sponsorship.sponsor.data.TierSub;
-
+import com.janaldous.sponsorship.companieshouse.data.CompanyHouseCompany;
+import com.janaldous.sponsorship.namecomparison.NameNormalizer;
+import com.janaldous.sponsorship.sponsor.data.Sponsor;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
-//@Transactional
 public class RelevantSponsorTest {
 	
-	@Autowired
-	private RelevantSponsorRepository relevantSponsorRepository;
+	@TestConfiguration
+    static class EmployeeServiceImplTestContextConfiguration {
+  
+        @Bean
+        public NameNormalizer nameNormalizer() {
+            return new NameNormalizer();
+        }
+    }
 	
 	@Autowired
-	private SponsorRepository sponsorRepository;
-	
-	@Autowired
-	private IRelevantSponsorService relevantSponsorService;
-	
-	@Autowired
-	private CheckingSponsorRepository checkingSponsorRepository;
+	private NameNormalizer nameNormalizer;
 	
 	@Test
-	public void test() {
-		System.out.println("asdf");
+	public void testCheckingPossibleIncorrectLikeness_exact() {
+		String companyName = "company house name";
+		CompanyResult output = checkCompanyNameLikeness(companyName, companyName);
+		assertTrue(!output.isPossibleIncorrectLikeness());
 
-		sponsorRepository.findLondonSponsors().stream()
-			.filter(x -> {
-				return x.getId() >= 95476 && x.isInLondon() && !x.getTier().isEmpty() 
-						&& x.getTier().stream().anyMatch(y -> {
-							return y.getTier() == TierNum.TIER_2 && y.getSubTier() == TierSub.GENERAL;
-						});
-			})
-			.forEach(x -> {
-				System.out.println(x);
-				relevantSponsorRepository.save(RelevantSponsor.builder().sponsor(x).processed(false).likeness(-1).build());
-			});
+	}
+
+	private CompanyResult checkCompanyNameLikeness(String name1, String name2) {
+		CompanyHouseCompany company = new CompanyHouseCompany();
+		company.setCompanyHouseName(name1);
+		Sponsor sponsor = new Sponsor();
+		sponsor.setName(name1);
+		CheckingSponsor checkingSponsor = new CheckingSponsor();
+		checkingSponsor.setSponsor(sponsor);
+		CompanyResult result = new CompanyResult(company, checkingSponsor);
+		return RelevantSponsorService.mapIncorrectLikeness(result, nameNormalizer);
 	}
 	
 	@Test
-	public void test2() {
-		int size = sponsorRepository.findLondonSponsors().size();
-		System.out.println(size);
+	public void testCheckingPossibleIncorrectLikeness_normalized() {
+		String companyName = "company house name limited";
+		CompanyResult output = checkCompanyNameLikeness(companyName, "company house name ltd");
+		assertTrue(!output.isPossibleIncorrectLikeness());
 	}
 	
-//	@Test
-	public void test3() {
-		List<CompanyResult> companies = relevantSponsorService.findAllRelevantSponsors(null);
-		System.out.println(companies.size());
-//		companies.stream().forEach(x -> {
-//			CheckingSponsor sponsor = CheckingSponsor.builder().sponsor(x.getCompany().getSponsor()).build();
-////			checkingSponsorRepository.save(sponsor);
-//		});
+	@Test
+	public void testCheckingPossibleIncorrectLikeness_negativeTest1() {
+		String companyName = "company house name";
+		CompanyResult output = checkCompanyNameLikeness(companyName, "some other name");
+		assertFalse(output.isPossibleIncorrectLikeness());
 	}
+	
+	@Test(expected = RuntimeException.class)
+	public void testCheckingPossibleIncorrectLikeness_negativeTest_nullSponsor() {
+		String companyName = "company house name";
+		CompanyHouseCompany company = new CompanyHouseCompany();
+		company.setCompanyHouseName(companyName);
+		CheckingSponsor checkingSponsor = new CheckingSponsor();
+		CompanyResult result = new CompanyResult(company, checkingSponsor);
+		RelevantSponsorService.mapIncorrectLikeness(result, nameNormalizer);
+	}
+	
+	@Test(expected = RuntimeException.class)
+	public void testCheckingPossibleIncorrectLikeness_negativeTest_nullCompanyHouse() {
+		CompanyHouseCompany company = new CompanyHouseCompany();
+		CheckingSponsor checkingSponsor = new CheckingSponsor();
+		CompanyResult result = new CompanyResult(company, checkingSponsor);
+		RelevantSponsorService.mapIncorrectLikeness(result, nameNormalizer);
+	}
+	
 }

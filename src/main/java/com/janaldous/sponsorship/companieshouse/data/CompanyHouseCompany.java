@@ -35,7 +35,7 @@ public class CompanyHouseCompany {
 	private boolean tier2;
 //	@Column(unique = true)
 	private String companiesHouseId;
-	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
+	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
 	private Set<SIC> sic;
 	@OneToOne//(fetch = FetchType.EAGER)
 	private Sponsor sponsor;

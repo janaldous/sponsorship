@@ -13,19 +13,14 @@ import com.janaldous.sponsorship.companieshouse.data.CompanyHouseCompany;
 @Data
 public class CompanyResult {
 
-//	@NonNull
-//	private String companiesHouseId;
-//	@NonNull
-//	private String companyHouseName;
-//	@NonNull
-//	private Long sponsorId;
-//	@NonNull
-//	private String sponsorName;
-//	@NonNull
-//	private String city;
-//	private Set<SIC> sics;
-//	private Set<Tier> tiers;
+	private boolean shouldCheckToday;
+	
+	/**
+	 * True when the company house name and sponsor name are not equal (case ignored)
+	 */
+	private boolean possibleIncorrectLikeness;
 	@NonNull
 	private CompanyHouseCompany company;
+	@NonNull
 	private CheckingSponsor checking;
 }

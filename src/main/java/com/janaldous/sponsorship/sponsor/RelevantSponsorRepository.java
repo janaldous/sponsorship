@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.janaldous.sponsorship.sponsor.data.ProcessStatus;
 import com.janaldous.sponsorship.sponsor.data.RelevantSponsor;
+import com.janaldous.sponsorship.sponsor.data.Sponsor;
 
 @Repository
 public interface RelevantSponsorRepository extends JpaRepository<RelevantSponsor, Long> {
@@ -20,5 +21,7 @@ public interface RelevantSponsorRepository extends JpaRepository<RelevantSponsor
 	
 	@Query("select r from RelevantSponsor r join Sponsor s on r.sponsor = s where status = 'SUCCESS'")
 	List<RelevantSponsor> findSuccessfulTier2(Pageable pageable);
+	
+	List<RelevantSponsor> findBySponsor(Sponsor sponsor);
 	
 }
