@@ -210,6 +210,7 @@ public class RelevantSponsorService implements IRelevantSponsorService {
 			break;
 		case "noOpenings":
 			checkingSponsor.setNoOpenings(checked.isNoOpenings());
+			break;
 		default:
 			throw new IllegalArgumentException("Invalid changedField " + changedField);
 		}

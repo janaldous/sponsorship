@@ -1,5 +1,6 @@
 package com.janaldous.sponsorship;
 
+import java.util.Properties;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
@@ -8,19 +9,26 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.client.support.BasicAuthenticationInterceptor;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.web.client.RestTemplate;
 
 import opennlp.tools.tokenize.SimpleTokenizer;
 
+@PropertySource("classpath:secrets.properties")
 @Configuration
 public class Config {
 	
-	@Value("${api_key:235dTXUILwMbp2PcLyfIyKs_tBf9aHiB7uEQRSDn}")
+	@Value("${api_key}")
 	private String apiKey;
 	
-//	@Autowired
-//	private EntityManagerFactory entityManagerFactory;
+	@Value("${gmail}")
+	private String gmail;
+	
+	@Value("${gmail.password}")
+	private String gmailPassword;
 	
 	@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
@@ -43,12 +51,23 @@ public class Config {
 		return tokenizer;
 	}
 	
-//	@Bean
-//	public SessionFactory getSessionFactory() {
-//	    if (entityManagerFactory.unwrap(SessionFactory.class) == null) {
-//	        throw new NullPointerException("factory is not a hibernate factory");
-//	    }
-//	    return entityManagerFactory.unwrap(SessionFactory.class);
-//	}
+	@Bean
+	public JavaMailSender getJavaMailSender() {
+	    JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+	    mailSender.setHost("smtp.gmail.com");
+	    mailSender.setPort(587);
+	     
+	    mailSender.setUsername(gmail);
+	    mailSender.setPassword(gmailPassword);
+	     
+        Properties props = mailSender.getJavaMailProperties();
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "465");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.socketFactory.port", "465");
+        props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+	     
+	    return mailSender;
+	}
 	
 }
