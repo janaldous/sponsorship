@@ -41,4 +41,6 @@ public class CheckedDto {
 	private String categories;
 	private String otherInfo;
 	
+	private String changedField;
+	
 }

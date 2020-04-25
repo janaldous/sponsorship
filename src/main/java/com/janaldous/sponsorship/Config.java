@@ -3,18 +3,15 @@ package com.janaldous.sponsorship;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
-import javax.persistence.EntityManagerFactory;
-
-import opennlp.tools.tokenize.SimpleTokenizer;
-
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.support.BasicAuthenticationInterceptor;
 import org.springframework.web.client.RestTemplate;
+
+import opennlp.tools.tokenize.SimpleTokenizer;
 
 @Configuration
 public class Config {
@@ -34,6 +31,7 @@ public class Config {
 	}
 	
 	@Bean
+	@Qualifier("MyThreadPoolExecutor")
 	public ThreadPoolExecutor executor() {
 		ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(4);
 		return executor;
