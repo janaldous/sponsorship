@@ -33,7 +33,7 @@ import com.janaldous.sponsorship.sponsor.data.Sponsor;
 import com.janaldous.sponsorship.sponsor.data.Tier;
 import com.janaldous.sponsorship.sponsor.data.TierNum;
 import com.janaldous.sponsorship.sponsor.data.TierSub;
-import com.janaldous.sponsorship.webfacade.CheckedDto;
+import com.janaldous.sponsorship.webfacade.dto.CheckedDto;
 
 @Service
 public class RelevantSponsorService implements IRelevantSponsorService {

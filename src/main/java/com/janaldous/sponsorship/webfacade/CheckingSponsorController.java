@@ -15,13 +15,11 @@ import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
 import com.janaldous.sponsorship.checksponsor.CheckingSponsorRepository;
 import com.janaldous.sponsorship.sponsor.CompanyResult;
 import com.janaldous.sponsorship.sponsor.IRelevantSponsorService;
+import com.janaldous.sponsorship.webfacade.dto.CheckedDto;
 
 @RestController
 public class CheckingSponsorController {
 
-	@Autowired
-	private CheckingSponsorRepository checkingSponsorRepository;
-	
 	@Autowired
 	private IRelevantSponsorService relevantSponsorService;
 	

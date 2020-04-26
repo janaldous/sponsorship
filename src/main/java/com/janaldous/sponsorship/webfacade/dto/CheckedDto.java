@@ -1,4 +1,4 @@
-package com.janaldous.sponsorship.webfacade;
+package com.janaldous.sponsorship.webfacade.dto;
 
 import lombok.Data;
 
