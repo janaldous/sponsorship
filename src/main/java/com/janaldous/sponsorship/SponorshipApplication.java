@@ -13,8 +13,8 @@ public class SponorshipApplication {
 
 	private static final Logger log = LoggerFactory.getLogger(SponorshipApplication.class);
 
-	@Autowired
-	private WorkerBean worker;
+//	@Autowired
+//	private WorkerBean worker;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SponorshipApplication.class, args);

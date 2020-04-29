@@ -1,4 +1,4 @@
-package com.janaldous.sponsorship.email.core;
+package com.janaldous.sponsorship.email;
 
 import java.io.File;
 
@@ -24,7 +24,7 @@ public class Gmailer implements EmailService {
 
 	@Override
 	public void sendEmail(String to, String subject, String text) {
-		log.info("preparing to send email");
+		log.info("Preparing to send email");
 
 		SimpleMailMessage message = new SimpleMailMessage(); 
 		message.setTo(to);
@@ -32,30 +32,27 @@ public class Gmailer implements EmailService {
 		message.setText(text);
 		emailSender.send(message);
 
-		log.info("sent email");
+		log.info("Email sending successful");
 	}
 
 	@Override
-	public void sendEmailWithAttachments(String to, String subject, String text, String attachmentFilename, String pathToAttachment) {
+	public void sendEmailWithAttachments(String to, String subject, String text, String attachmentFilename, String pathToAttachment) throws MessagingException {
 		log.info("preparing to send email");
 
-		try {
-			MimeMessage message = emailSender.createMimeMessage();
-			
-			MimeMessageHelper helper;
-			helper = new MimeMessageHelper(message, true);
-			helper.setTo(to);
-			helper.setSubject(subject);
-			helper.setText(text);
-			
-			FileSystemResource file = new FileSystemResource(new File(pathToAttachment));
-			helper.addAttachment(attachmentFilename, file);
-			
-			emailSender.send(message);
-			log.info("sent email");
-		} catch (MessagingException e) {
-			throw new RuntimeException(e);
-		}
+		MimeMessage message = emailSender.createMimeMessage();
+
+		MimeMessageHelper helper;
+		helper = new MimeMessageHelper(message, true);
+		helper.setTo(to);
+		helper.setSubject(subject);
+		helper.setText(text);
+
+		FileSystemResource file = new FileSystemResource(new File(pathToAttachment));
+		helper.addAttachment(attachmentFilename, file);
+
+		emailSender.send(message);
+
+		log.info("sent email");
 	}
 
 }

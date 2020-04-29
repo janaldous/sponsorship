@@ -3,6 +3,7 @@ package com.janaldous.sponsorship.webfacade;
 import java.util.List;
 import java.util.Optional;
 
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
-import com.janaldous.sponsorship.checksponsor.CheckingSponsorRepository;
 import com.janaldous.sponsorship.sponsor.CompanyResult;
 import com.janaldous.sponsorship.sponsor.IRelevantSponsorService;
 import com.janaldous.sponsorship.webfacade.dto.CheckedDto;
@@ -30,7 +30,7 @@ public class CheckingSponsorController {
 	
 	@PostMapping("/sponsors/{id}")
 	public CheckingSponsor checked(@PathVariable("id") String id, @RequestBody CheckedDto checked) {
-		if (id == null || id.isEmpty()) {
+		if (Strings.isBlank(id)) {
 			throw new IllegalArgumentException("id is required");
 		}
 		return relevantSponsorService.checked(Long.valueOf(id), checked);

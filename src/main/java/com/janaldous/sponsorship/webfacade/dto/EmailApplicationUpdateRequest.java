@@ -1,16 +1,15 @@
 package com.janaldous.sponsorship.webfacade.dto;
 
+import com.janaldous.sponsorship.application.domain.EmailQueueStatus;
+
 import lombok.Data;
-import lombok.NonNull;
 
 @Data
-public class EmailApplicationRequest {
+public class EmailApplicationUpdateRequest {
 
-	@NonNull
+	private EmailQueueStatus status;
 	private String toAddress;
-	@NonNull
 	private String jobName;
-	@NonNull
 	private Long sponsorId;
 	
 }

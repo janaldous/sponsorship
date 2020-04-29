@@ -1,4 +1,4 @@
-package com.janaldous.sponsorship.email.domain;
+package com.janaldous.sponsorship.application.domain;
 
 import java.util.Date;
 
@@ -19,7 +19,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class EmailAudit {
+public class EmailQueueItem {
 
 	@GeneratedValue
 	@Id
@@ -28,10 +28,9 @@ public class EmailAudit {
 	@UpdateTimestamp
 	private Date timestamp;
 	@Enumerated(EnumType.STRING)
-	private EmailSendingStatus status;
+	private EmailQueueStatus status;
 	private String toAddress;
 	private String jobName;
 	@ManyToOne
 	private CheckingSponsor sponsor;
-	
 }
