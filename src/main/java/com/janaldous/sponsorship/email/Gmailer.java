@@ -36,7 +36,7 @@ public class Gmailer implements EmailService {
 	}
 
 	@Override
-	public void sendEmailWithAttachments(String to, String subject, String text, String attachmentFilename, String pathToAttachment) throws MessagingException {
+	public void sendEmailWithAttachments(String to, String subject, String text, String attachmentFilename, File attachment) throws MessagingException {
 		log.info("preparing to send email");
 
 		MimeMessage message = emailSender.createMimeMessage();
@@ -47,7 +47,7 @@ public class Gmailer implements EmailService {
 		helper.setSubject(subject);
 		helper.setText(text);
 
-		FileSystemResource file = new FileSystemResource(new File(pathToAttachment));
+		FileSystemResource file = new FileSystemResource(attachment);
 		helper.addAttachment(attachmentFilename, file);
 
 		emailSender.send(message);

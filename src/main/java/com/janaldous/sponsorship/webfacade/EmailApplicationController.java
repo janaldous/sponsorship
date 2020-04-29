@@ -62,15 +62,15 @@ public class EmailApplicationController {
 		return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
 	
-	@PutMapping("/application/email/{emailAuditId}")
-	public ResponseEntity<String> sendEmailApplication(@PathVariable String emailAuditId, @RequestBody EmailApplicationUpdateRequest emailRequest) {
+	@PutMapping("/application/email/{emailLogId}")
+	public ResponseEntity<String> sendEmailApplication(@PathVariable String emailLogId, @RequestBody EmailApplicationUpdateRequest emailRequest) {
 		try {
 			if (EmailQueueStatus.READY_TO_BE_SENT == emailRequest.getStatus()) {
-				applicationService.sendApplicationByEmail(Long.parseLong(emailAuditId));
+				applicationService.sendApplicationByEmail(Long.parseLong(emailLogId));
 			}
 			return ResponseEntity.ok().build();
 		} catch (NumberFormatException e) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("email log id is cannot be parsed to long: " + emailAuditId);
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("email log id is cannot be parsed to long: " + emailLogId);
 		} catch (ApplicationException e) {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
 		}
