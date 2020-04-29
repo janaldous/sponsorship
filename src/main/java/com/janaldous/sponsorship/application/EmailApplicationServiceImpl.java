@@ -3,7 +3,6 @@ package com.janaldous.sponsorship.application;
 import javax.mail.MessagingException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import com.janaldous.sponsorship.application.domain.EmailProperties;
@@ -11,7 +10,6 @@ import com.janaldous.sponsorship.email.EmailService;
 
 import lombok.NonNull;
 
-@PropertySource({ "classpath:email.properties" })
 @Component
 class EmailApplicationServiceImpl implements EmailApplicationService {
 
@@ -26,6 +24,7 @@ class EmailApplicationServiceImpl implements EmailApplicationService {
 
 		String subject = "Application - " + jobName;
 		String body = emailProperties.getEmailTemplate().replace("{jobName}", jobName);
+		
 		emailService.sendEmailWithAttachments(to, subject, body, emailProperties.getAttachmentFilename(), emailProperties.getAttachment());
 	}
 
