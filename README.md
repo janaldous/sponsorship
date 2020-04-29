@@ -8,13 +8,13 @@ Required properties files
 - email.properties
 
 ### Api secrets
-Ensure to add app secrets in **secrets.properties**<br/>
+Required properties in **secrets.properties**<br/>
 gmail=<your gmail address><br/>
 gmail=<your gmail password - could be app password><br/>
 api_key=<Company House API key><br/>
 
 ### Email properties
-Required properties:<br/>
+Required properties for email.properties:<br/>
 email.service.attachmentname=<attachment name to be shown in the email e.g. John Doe CV.pdf><br/>
 email.service.cvpath=<path to cv><br/>
 email.service.emailtemplate=<path to email template as .txt file, must be in the resources folder><br/>
