@@ -15,9 +15,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import com.janaldous.sponsorship.application.domain.EmailProperties;
 
+@PropertySource("classpath:email.properties")
 @Configuration
 public class EmailConfig {
 
