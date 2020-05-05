@@ -1,6 +1,7 @@
 package com.janaldous.sponsorship.sponsor;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +32,7 @@ public class RelevantSponsorIT {
 	@Autowired
 	private CheckingSponsorRepository checkingSponsorRepository;
 	
-	@Test
+//	@Test
 	public void test() {
 		System.out.println("asdf");
 
@@ -62,5 +63,11 @@ public class RelevantSponsorIT {
 //			CheckingSponsor sponsor = CheckingSponsor.builder().sponsor(x.getCompany().getSponsor()).build();
 ////			checkingSponsorRepository.save(sponsor);
 //		});
+	}
+	
+	@Test
+	public void test4() {
+		List<CompanyResult> companies = relevantSponsorService.findAllRelevantSponsors(Optional.of(10), Optional.of(5));
+		System.out.println(companies.size());
 	}
 }

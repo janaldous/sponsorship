@@ -1,20 +1,20 @@
 package com.janaldous.sponsorship.sponsor;
 
+import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
+import com.janaldous.sponsorship.companieshouse.data.CompanyHouseCompany;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
-import com.janaldous.sponsorship.companieshouse.data.CompanyHouseCompany;
-
-@RequiredArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor
 @Data
 public class CompanyResult {
 
 	private boolean shouldCheckToday;
-	
+
 	/**
 	 * True when the company house name and sponsor name are not equal (case ignored)
 	 */
@@ -23,4 +23,5 @@ public class CompanyResult {
 	private CompanyHouseCompany company;
 	@NonNull
 	private CheckingSponsor checking;
+	
 }

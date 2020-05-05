@@ -17,6 +17,10 @@ import com.janaldous.sponsorship.application.domain.EmailQueueItem;
 import com.janaldous.sponsorship.application.domain.EmailQueueStatus;
 import com.janaldous.sponsorship.application.domain.EmailSentStatus;
 import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
+import com.janaldous.sponsorship.checksponsor.CheckingSponsorRepository;
+import com.janaldous.sponsorship.webfacade.exception.ResourceNotFoundException;
+
+import lombok.NonNull;
 
 @Component
 public class ApplicationServiceImpl implements ApplicationService {
@@ -31,6 +35,9 @@ public class ApplicationServiceImpl implements ApplicationService {
 	
 	@Autowired
 	private EmailApplicationService emailApplicationService;
+	
+	@Autowired
+	private CheckingSponsorRepository checkingSponsorRepository;
 	
 	@Override
 	public void draftApplicationByEmail(String toAddress, String jobName, CheckingSponsor sponsor) {
@@ -87,6 +94,13 @@ public class ApplicationServiceImpl implements ApplicationService {
 	@Override
 	public Optional<EmailQueueItem> getEmailApplicationById(Long id) {
 		return emailQueueItemRepository.findById(id);
+	}
+
+	@Override
+	public boolean hasApplicationByEmail(@NonNull Long sponsorId) {
+		CheckingSponsor checkingSponsor = checkingSponsorRepository.findById(sponsorId).orElseThrow(() -> new ResourceNotFoundException());
+		return emailQueueItemRepository.existsBySponsor(checkingSponsor) || !emailLogRepository.isProcessedSuccessfully(checkingSponsor).isEmpty();
+		
 	}
 
 }

@@ -15,7 +15,10 @@ public interface IRelevantSponsorService {
 
 	CheckingSponsor checked(Long id, CheckedDto checked);
 
-	public abstract List<CompanyResult> getCompanyResultsWithSchedule(Optional<Integer> pageNumber,
+	List<CompanyResult> getCompanyResultsWithSchedule(Optional<Integer> pageNumber,
+			Optional<Integer> pageSize);
+	
+	List<SponsorChecklist> getCompanyResultsWithSchedule2(Optional<Integer> pageNumber,
 			Optional<Integer> pageSize);
 	
 }

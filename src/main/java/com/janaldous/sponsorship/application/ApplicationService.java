@@ -7,6 +7,8 @@ import com.janaldous.sponsorship.application.domain.EmailQueueItem;
 import com.janaldous.sponsorship.application.domain.EmailQueueStatus;
 import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
 
+import lombok.NonNull;
+
 public interface ApplicationService {
 
 	/**
@@ -37,5 +39,7 @@ public interface ApplicationService {
 	List<EmailQueueItem> getEmailApplicationByStatus(EmailQueueStatus emailQueueStatus);
 
 	Optional<EmailQueueItem> getEmailApplicationById(Long id);
+
+	boolean hasApplicationByEmail(@NonNull Long sponsorId);
 
 }

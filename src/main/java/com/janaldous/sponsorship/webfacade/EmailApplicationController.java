@@ -56,7 +56,9 @@ public class EmailApplicationController {
 	public ResponseEntity<String> draftEmailApplication(@RequestBody EmailApplicationRequest emailRequest) {
 		Sponsor sponsor = sponsorRepository.findById(emailRequest.getSponsorId()).orElseThrow(() -> new ResourceNotFoundException());
 		CheckingSponsor checkingSponsor = Optional.ofNullable(checkingSponsorRepository.findBySponsor(sponsor).get(0)).orElseThrow(() -> new ResourceNotFoundException());
-		
+		if (applicationService.hasApplicationByEmail(emailRequest.getSponsorId())) {
+			return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).build();
+		}
 		applicationService.draftApplicationByEmail(emailRequest.getToAddress(), emailRequest.getJobName(), checkingSponsor);
 		
 		return ResponseEntity.status(HttpStatus.CREATED).build();

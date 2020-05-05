@@ -11,8 +11,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaBuilder.In;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Fetch;
 import javax.persistence.criteria.Join;
+import javax.persistence.criteria.JoinType;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
@@ -22,6 +25,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.janaldous.sponsorship.application.domain.EmailQueueItem;
+import com.janaldous.sponsorship.application.domain.EmailQueueStatus;
 import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
 import com.janaldous.sponsorship.checksponsor.CheckingSponsorRepository;
 import com.janaldous.sponsorship.companieshouse.data.CompanyHouseCompany;
@@ -106,11 +111,13 @@ public class RelevantSponsorService implements IRelevantSponsorService {
 
 			Root<CompanyHouseCompany> chCompany = cq
 					.from(CompanyHouseCompany.class);
-			Join<Object, Object> sponsor = chCompany.join("sponsor");
+			Join<CompanyHouseCompany, Sponsor> sponsor = chCompany.join("sponsor");
 			Root<RelevantSponsor> relevantSponsor = cq
 					.from(RelevantSponsor.class);
+			Join<RelevantSponsor, Sponsor> joinRelevantSponsor = relevantSponsor.join("sponsor");
 			Root<CheckingSponsor> checkingSponsor = cq
 					.from(CheckingSponsor.class);
+			Join<CheckingSponsor, Sponsor> joinCheckingSponsor = checkingSponsor.join("sponsor");
 
 			Predicate predSponsor = cb.equal(relevantSponsor.get("sponsor"),
 					sponsor);
@@ -127,10 +134,11 @@ public class RelevantSponsorService implements IRelevantSponsorService {
 					cb.construct(CompanyResult.class, chCompany,
 							checkingSponsor))
 			.distinct(true)
-			.where(cb.and(
-					cb.and(predSponsor,
-							cb.and(cb.or(preds), predChecking)),
-					cb.and(predSuccess, predTier2Gen)));
+			.where(
+					cb.and(
+							cb.and(predSponsor,
+									cb.and(cb.or(preds), predChecking)),
+							cb.and(predSuccess, predTier2Gen)));
 
 			TypedQuery<CompanyResult> typedQuery = entityManager
 					.createQuery(cq);
@@ -168,9 +176,9 @@ public class RelevantSponsorService implements IRelevantSponsorService {
 		}
 		CheckingSponsor checkingSponsor = checkingSponsors.get(0);
 		String changedField = checked.getChangedField();
-		
+
 		Objects.requireNonNull(changedField, "changedField cannot be null");
-		
+
 		switch (changedField) {
 		case "applied":
 			checkingSponsor.setApplied(checked.isApplied());
@@ -258,6 +266,13 @@ public class RelevantSponsorService implements IRelevantSponsorService {
 		}
 		companyResult.setPossibleIncorrectLikeness(!isEqual);
 		return companyResult;
+	}
+
+	@Override
+	public List<SponsorChecklist> getCompanyResultsWithSchedule2(Optional<Integer> pageNumber,
+			Optional<Integer> pageSize) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
