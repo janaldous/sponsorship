@@ -16,7 +16,7 @@ import com.janaldous.sponsorship.webfacade.exception.ResourceNotFoundException;
 public class ApplicationServiceImplTest {
 
 	@Autowired
-	private ApplicationService applicationService;
+	private IApplicationService applicationService;
 	
 	@Test
 	public void testDraftInQueue() {

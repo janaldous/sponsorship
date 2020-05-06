@@ -9,7 +9,7 @@ import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
 
 import lombok.NonNull;
 
-public interface ApplicationService {
+public interface IApplicationService {
 
 	/**
 	 * Application via email will be added to the "email queue".
@@ -24,7 +24,7 @@ public interface ApplicationService {
 	
 	/**
 	 * Attempt to send application by email that is already in "email queue". 
-	 * @see ApplicationService#draftApplicationByEmail(String, String, CheckingSponsor)
+	 * @see IApplicationService#draftApplicationByEmail(String, String, CheckingSponsor)
 	 * 
 	 * @param id of EmailAudit to be sent
 	 * @throws ApplicationException 

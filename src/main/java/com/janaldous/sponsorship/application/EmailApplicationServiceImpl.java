@@ -11,7 +11,7 @@ import com.janaldous.sponsorship.email.IEmailService;
 import lombok.NonNull;
 
 @Component
-class EmailApplicationServiceImpl implements EmailApplicationService {
+class EmailApplicationServiceImpl implements IEmailApplicationService {
 
 	@Autowired
 	private IEmailService emailService;

@@ -2,7 +2,7 @@ package com.janaldous.sponsorship.application;
 
 import javax.mail.MessagingException;
 
-interface EmailApplicationService {
+interface IEmailApplicationService {
 
 	/**
 	 * Send application as email with default body and CV as attachment

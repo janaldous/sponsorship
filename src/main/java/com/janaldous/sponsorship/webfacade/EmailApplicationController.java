@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.janaldous.sponsorship.application.ApplicationException;
-import com.janaldous.sponsorship.application.ApplicationService;
+import com.janaldous.sponsorship.application.IApplicationService;
 import com.janaldous.sponsorship.application.domain.EmailQueueItem;
 import com.janaldous.sponsorship.application.domain.EmailQueueStatus;
 import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
@@ -29,7 +29,7 @@ import com.janaldous.sponsorship.webfacade.exception.ResourceNotFoundException;
 public class EmailApplicationController {
 
 	@Autowired
-	private ApplicationService applicationService;
+	private IApplicationService applicationService;
 	
 	@Autowired
 	private CheckingSponsorRepository checkingSponsorRepository;

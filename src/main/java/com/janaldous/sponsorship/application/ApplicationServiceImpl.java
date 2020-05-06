@@ -23,7 +23,7 @@ import com.janaldous.sponsorship.webfacade.exception.ResourceNotFoundException;
 import lombok.NonNull;
 
 @Component
-public class ApplicationServiceImpl implements ApplicationService {
+public class ApplicationServiceImpl implements IApplicationService {
 
 	private static final Logger log = LoggerFactory.getLogger(ApplicationServiceImpl.class);
 	
@@ -34,7 +34,7 @@ public class ApplicationServiceImpl implements ApplicationService {
 	private EmailLogRepository emailLogRepository;
 	
 	@Autowired
-	private EmailApplicationService emailApplicationService;
+	private IEmailApplicationService emailApplicationService;
 	
 	@Autowired
 	private CheckingSponsorRepository checkingSponsorRepository;
