@@ -18,7 +18,7 @@ import com.janaldous.sponsorship.sponsor.data.Sponsor;
 public class RelevantSponsorTest {
 	
 	@TestConfiguration
-    static class EmployeeServiceImplTestContextConfiguration {
+    static class ContextConfiguration {
   
         @Bean
         public NameNormalizer nameNormalizer() {

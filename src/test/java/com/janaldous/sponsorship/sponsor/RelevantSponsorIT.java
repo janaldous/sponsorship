@@ -3,6 +3,7 @@ package com.janaldous.sponsorship.sponsor;
 import java.util.List;
 import java.util.Optional;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import com.janaldous.sponsorship.sponsor.data.RelevantSponsor;
 import com.janaldous.sponsorship.sponsor.data.TierNum;
 import com.janaldous.sponsorship.sponsor.data.TierSub;
 
-
+@Ignore
 @RunWith(SpringRunner.class)
 @SpringBootTest
 //@Transactional

@@ -3,15 +3,12 @@ package com.janaldous.sponsorship.worker;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.client.HttpClientErrorException;
 
 import com.janaldous.sponsorship.companieshouse.ICompanyEntityService;
-import com.janaldous.sponsorship.companieshouse.ICompanyHouseAPI;
+import com.janaldous.sponsorship.companieshouse.ICompanyHouseFacade;
 import com.janaldous.sponsorship.companieshouse.data.SIC;
 import com.janaldous.sponsorship.companieshouse.dto.Company;
 import com.janaldous.sponsorship.namecomparison.AlphabetComparator;
@@ -20,6 +17,9 @@ import com.janaldous.sponsorship.sponsor.RelevantSponsorRepository;
 import com.janaldous.sponsorship.sponsor.data.ProcessStatus;
 import com.janaldous.sponsorship.sponsor.data.RelevantSponsor;
 
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
+
 @RequiredArgsConstructor
 public class GetSICCodeTask implements Runnable {
 
@@ -27,7 +27,7 @@ public class GetSICCodeTask implements Runnable {
 			.getLogger(GetSICCodeTask.class);
 
 	@NonNull
-	private ICompanyHouseAPI companiesHouseService;
+	private ICompanyHouseFacade companiesHouseService;
 	@NonNull
 	private ICompanyEntityService companyHouseCompanyService;
 	@NonNull

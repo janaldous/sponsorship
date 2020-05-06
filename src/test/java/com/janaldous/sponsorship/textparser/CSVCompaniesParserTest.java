@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.janaldous.sponsorship.companieshouse.ICompanyHouseAPI;
+import com.janaldous.sponsorship.companieshouse.ICompanyHouseFacade;
 import com.janaldous.sponsorship.companieshouse.data.SIC;
 import com.janaldous.sponsorship.sponsor.IRelevantSponsorService;
 
@@ -22,7 +22,7 @@ import com.janaldous.sponsorship.sponsor.IRelevantSponsorService;
 public class CSVCompaniesParserTest {
 
 	@Autowired
-	private ICompanyHouseAPI companiesHouseService;
+	private ICompanyHouseFacade companiesHouseService;
 	
 	@Autowired
 	private IRelevantSponsorService sponsorService;

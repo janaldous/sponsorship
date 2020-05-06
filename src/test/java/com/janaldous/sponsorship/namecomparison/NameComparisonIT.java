@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.janaldous.sponsorship.companieshouse.CompaniesHouseAPI;
+import com.janaldous.sponsorship.companieshouse.ICompanyHouseFacade;
 import com.janaldous.sponsorship.companieshouse.dto.Company;
 import com.janaldous.sponsorship.sponsor.RelevantSponsorRepository;
 import com.janaldous.sponsorship.sponsor.SponsorRepository;
@@ -32,7 +32,7 @@ public class NameComparisonIT {
 	private RelevantSponsorRepository relevantSponsorRepository;
 	
 	@Autowired
-	private CompaniesHouseAPI chService;
+	private ICompanyHouseFacade chService;
 	
 	@Test
 	public void test() {
@@ -59,7 +59,7 @@ public class NameComparisonIT {
 			Company company = chService.searchCompany(name);
 			int calculateLikeness = comparator.calculateLikeness(name, company.getName());
 			log.info("result = " + company.getName() + " likeness = " + calculateLikeness);
-			if (calculateLikeness <= CompaniesHouseAPI.LIKENESS_THRESHOLD) {
+			if (calculateLikeness <= ICompanyHouseFacade.LIKENESS_THRESHOLD) {
 				log.info("improvement ***********");
 			} else {
 				log.info("same");

@@ -8,16 +8,16 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
-import lombok.AllArgsConstructor;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.janaldous.sponsorship.companieshouse.ICompanyEntityService;
-import com.janaldous.sponsorship.companieshouse.ICompanyHouseAPI;
+import com.janaldous.sponsorship.companieshouse.ICompanyHouseFacade;
 import com.janaldous.sponsorship.sponsor.IRelevantSponsorService;
 import com.janaldous.sponsorship.sponsor.RelevantSponsorRepository;
 import com.janaldous.sponsorship.sponsor.data.RelevantSponsor;
+
+import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class BatchGetSICCodeWorker implements Runnable {
@@ -26,7 +26,7 @@ public class BatchGetSICCodeWorker implements Runnable {
 
 	private IRelevantSponsorService relevantSponsorService;
 	private RelevantSponsorRepository relevantSponsorRepository;
-	private ICompanyHouseAPI companiesHouseService;
+	private ICompanyHouseFacade companiesHouseService;
 	private ICompanyEntityService companyEntityService;
 	private AtomicInteger tooManyRequests;
 	private CountDownLatch finishedBatch;

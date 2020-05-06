@@ -9,37 +9,33 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.apache.pdfbox.pdmodel.PDDocument;
 import org.junit.Test;
 
+import com.janaldous.sponsorship.datacollection.pdfparser.PdfDocumentParserException;
 import com.janaldous.sponsorship.datacollection.pdfparser.PdfVisaSponsor;
-import com.janaldous.sponsorship.datacollection.pdfparser.SponsorPdfReader;
-import com.janaldous.sponsorship.datacollection.pdfparser.TextParserAdvanced;
 import com.janaldous.sponsorship.datacollection.pdfparser.SponsorPagesText;
+import com.janaldous.sponsorship.datacollection.pdfparser.SponsorPagesTextParser;
+import com.janaldous.sponsorship.datacollection.pdfparser.SponsorPdfReader;
 import com.janaldous.sponsorship.sponsor.data.TierSub;
 
 public class TextParserAdvancedReaderTest {
+	
+	private String root = "/Users/janaldoustorres/Documents/Code/Java/stuff2019";
+	private File file = new File(
+			root
+			+ "/code-kata/src/main/resources/2019-07-12_Tier_2_5_Register_of_Sponsors.pdf");
 
+	private SponsorPdfReader reader = new SponsorPdfReader();
+	private SponsorPagesTextParser parser = new SponsorPagesTextParser();
+	
 	@Test
-	public void test() throws IOException {
-		String root = "/Users/janaldoustorres/Documents/Code/Java/stuff2019";
-		File file = new File(
-				root
-						+ "/code-kata/src/main/resources/2019-07-12_Tier_2_5_Register_of_Sponsors.pdf");
+	public void test() throws IOException, PdfDocumentParserException {
 
 		List<PdfVisaSponsor> original = new ArrayList<>();
-		try (PDDocument document = PDDocument.load(file)) {
 
-			SponsorPdfReader reader = new SponsorPdfReader();
-			SponsorPagesText text = reader.read(document, 364, 366);
+		SponsorPagesText text = reader.read(file, 364, 366);
 
-			TextParserAdvanced parser = new TextParserAdvanced();
-			parser.setName(text.getNames());
-			parser.setCity(text.getTowns());
-			parser.setCityCounty(text.getTownCounties());
-			parser.setTier(text.getTiers());
-			original = parser.extractCompanies();
-		}
+		original = parser.extractCompanies(text);
 		
 		original.forEach(System.out::println);
 		

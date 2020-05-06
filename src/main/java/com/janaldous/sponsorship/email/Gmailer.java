@@ -15,7 +15,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Gmailer implements EmailService {
+public class Gmailer implements IEmailService {
 
 	private static final Logger log = LoggerFactory.getLogger(Gmailer.class);
 

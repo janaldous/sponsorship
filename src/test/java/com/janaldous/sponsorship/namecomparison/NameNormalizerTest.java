@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class NameNormalizerTest {
 
 	@TestConfiguration
-    static class EmployeeServiceImplTestContextConfiguration {
+    static class ContextConfiguration {
   
         @Bean
         public NameNormalizer nameNormalizer() {

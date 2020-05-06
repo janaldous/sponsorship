@@ -1,5 +1,6 @@
 package com.janaldous.sponsorship.pdfparser;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import com.janaldous.sponsorship.sponsor.data.Tier;
 import com.janaldous.sponsorship.sponsor.data.TierNum;
 import com.janaldous.sponsorship.sponsor.data.TierSub;
 
+@Ignore
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TierTest {

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.janaldous.sponsorship.application.domain.EmailProperties;
-import com.janaldous.sponsorship.email.EmailService;
+import com.janaldous.sponsorship.email.IEmailService;
 
 import lombok.NonNull;
 
@@ -14,7 +14,7 @@ import lombok.NonNull;
 class EmailApplicationServiceImpl implements EmailApplicationService {
 
 	@Autowired
-	private EmailService emailService;
+	private IEmailService emailService;
 	
 	@Autowired
 	private EmailProperties emailProperties;

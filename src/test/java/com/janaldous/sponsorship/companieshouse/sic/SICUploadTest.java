@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.janaldous.sponsorship.companieshouse.data.SICUpload;
 
+@Ignore
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SICUploadTest {
