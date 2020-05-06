@@ -14,7 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.janaldous.sponsorship.companieshouse.ICompanyEntityService;
-import com.janaldous.sponsorship.companieshouse.ICompanyHouseService;
+import com.janaldous.sponsorship.companieshouse.ICompanyHouseAPI;
 import com.janaldous.sponsorship.sponsor.IRelevantSponsorService;
 import com.janaldous.sponsorship.sponsor.RelevantSponsorRepository;
 import com.janaldous.sponsorship.sponsor.data.RelevantSponsor;
@@ -26,7 +26,7 @@ public class BatchGetSICCodeWorker implements Runnable {
 
 	private IRelevantSponsorService relevantSponsorService;
 	private RelevantSponsorRepository relevantSponsorRepository;
-	private ICompanyHouseService companiesHouseService;
+	private ICompanyHouseAPI companiesHouseService;
 	private ICompanyEntityService companyEntityService;
 	private AtomicInteger tooManyRequests;
 	private CountDownLatch finishedBatch;

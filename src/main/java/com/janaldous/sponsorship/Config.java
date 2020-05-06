@@ -30,8 +30,9 @@ public class Config {
 	@Value("${gmail.password}")
 	private String gmailPassword;
 	
+	@Qualifier("companiesHouse")
 	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+	public RestTemplate companiesHouseRestTemplate(RestTemplateBuilder builder) {
 		RestTemplate restTemplate = builder.build();
 		restTemplate.getInterceptors().add(new BasicAuthenticationInterceptor(apiKey, ""));
 		

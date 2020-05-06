@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.janaldous.sponsorship.companieshouse.ICompanyEntityService;
-import com.janaldous.sponsorship.companieshouse.ICompanyHouseService;
+import com.janaldous.sponsorship.companieshouse.ICompanyHouseAPI;
 import com.janaldous.sponsorship.sponsor.IRelevantSponsorService;
 import com.janaldous.sponsorship.sponsor.RelevantSponsorRepository;
 
@@ -29,7 +29,7 @@ public class WorkerBean {
 	private ThreadPoolExecutor executor;
 
 	@Autowired
-	private ICompanyHouseService companiesHouseService;
+	private ICompanyHouseAPI companiesHouseService;
 
 	@Autowired
 	private ICompanyEntityService companyEntityService;

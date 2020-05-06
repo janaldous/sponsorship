@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.client.HttpClientErrorException;
 
 import com.janaldous.sponsorship.companieshouse.ICompanyEntityService;
-import com.janaldous.sponsorship.companieshouse.ICompanyHouseService;
+import com.janaldous.sponsorship.companieshouse.ICompanyHouseAPI;
 import com.janaldous.sponsorship.companieshouse.data.SIC;
 import com.janaldous.sponsorship.companieshouse.dto.Company;
 import com.janaldous.sponsorship.namecomparison.AlphabetComparator;
@@ -27,7 +27,7 @@ public class GetSICCodeTask implements Runnable {
 			.getLogger(GetSICCodeTask.class);
 
 	@NonNull
-	private ICompanyHouseService companiesHouseService;
+	private ICompanyHouseAPI companiesHouseService;
 	@NonNull
 	private ICompanyEntityService companyHouseCompanyService;
 	@NonNull

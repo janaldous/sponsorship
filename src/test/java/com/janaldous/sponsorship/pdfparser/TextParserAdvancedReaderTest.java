@@ -12,7 +12,10 @@ import java.util.stream.Collectors;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.junit.Test;
 
-import com.janaldous.sponsorship.pdfparser.SponsorPdfReader.SponsorText;
+import com.janaldous.sponsorship.datacollection.pdfparser.PdfVisaSponsor;
+import com.janaldous.sponsorship.datacollection.pdfparser.SponsorPdfReader;
+import com.janaldous.sponsorship.datacollection.pdfparser.TextParserAdvanced;
+import com.janaldous.sponsorship.datacollection.pdfparser.SponsorPagesText;
 import com.janaldous.sponsorship.sponsor.data.TierSub;
 
 public class TextParserAdvancedReaderTest {
@@ -24,25 +27,25 @@ public class TextParserAdvancedReaderTest {
 				root
 						+ "/code-kata/src/main/resources/2019-07-12_Tier_2_5_Register_of_Sponsors.pdf");
 
-		List<Company> original = new ArrayList<>();
+		List<PdfVisaSponsor> original = new ArrayList<>();
 		try (PDDocument document = PDDocument.load(file)) {
 
 			SponsorPdfReader reader = new SponsorPdfReader();
-			SponsorText text = reader.read(document, 364, 366);
+			SponsorPagesText text = reader.read(document, 364, 366);
 
 			TextParserAdvanced parser = new TextParserAdvanced();
 			parser.setName(text.getNames());
 			parser.setCity(text.getTowns());
 			parser.setCityCounty(text.getTownCounties());
 			parser.setTier(text.getTiers());
-			original = parser.generateCompanies();
+			original = parser.extractCompanies();
 		}
 		
 		original.forEach(System.out::println);
 		
 		System.out.println("\nall" + original.size() + "\n");
 		
-		List<Company> incorrect = original.stream().filter(x -> {
+		List<PdfVisaSponsor> incorrect = original.stream().filter(x -> {
 			return !(!x.getTier().isEmpty() && x.getTier().stream().allMatch(y -> y != null));
 		}).collect(Collectors.toList());
 		
@@ -50,7 +53,7 @@ public class TextParserAdvancedReaderTest {
 		
 		System.out.println("\nincorrect" + incorrect.size() + "\n");
 		
-		List<Company> filtered = original.stream().filter(x -> {
+		List<PdfVisaSponsor> filtered = original.stream().filter(x -> {
 			return x.isInLondon() && (x.getTier().isEmpty() || x.getTier().stream().anyMatch(y -> y.getSubTier() == TierSub.GENERAL));
 		}).collect(Collectors.toList());
 		
@@ -60,8 +63,8 @@ public class TextParserAdvancedReaderTest {
 		
 		assertTrue(original.size() > 16);
 		
-		Company company = original.get(0);
-		Company companyLondon = original.get(6);
+		PdfVisaSponsor company = original.get(0);
+		PdfVisaSponsor companyLondon = original.get(6);
 		
 		assertEquals("Bethshan (North East)", company.getName());
 		assertEquals("Washington", company.getCity());

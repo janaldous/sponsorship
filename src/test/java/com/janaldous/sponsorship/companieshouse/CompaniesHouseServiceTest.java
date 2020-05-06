@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.janaldous.sponsorship.companieshouse.ICompanyHouseService;
+import com.janaldous.sponsorship.companieshouse.ICompanyHouseAPI;
 import com.janaldous.sponsorship.companieshouse.data.SIC;
 import com.janaldous.sponsorship.companieshouse.dto.Company;
 
@@ -25,7 +25,7 @@ public class CompaniesHouseServiceTest {
 	private static final Logger log = LoggerFactory.getLogger(CompaniesHouseServiceTest.class);
 	
 	@Autowired
-	private ICompanyHouseService companiesHouseService;
+	private ICompanyHouseAPI companiesHouseService;
 	
 	@Test
 	public void testSearchCompany() {
