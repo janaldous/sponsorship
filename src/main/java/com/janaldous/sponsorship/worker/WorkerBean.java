@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 import com.janaldous.sponsorship.companieshouse.ICompanyEntityService;
 import com.janaldous.sponsorship.companieshouse.ICompanyHouseFacade;
 import com.janaldous.sponsorship.sponsor.IRelevantSponsorService;
-import com.janaldous.sponsorship.sponsor.RelevantSponsorRepository;
+import com.janaldous.sponsorship.sponsor.repository.RelevantSponsorRepository;
 
 @Component
 public class WorkerBean {

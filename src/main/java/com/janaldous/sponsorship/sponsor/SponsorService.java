@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import com.janaldous.sponsorship.sponsor.data.Sponsor;
 import com.janaldous.sponsorship.sponsor.data.Tier;
+import com.janaldous.sponsorship.sponsor.repository.SponsorRepository;
+import com.janaldous.sponsorship.sponsor.repository.TierRepository;
 
 @Service
 public class SponsorService implements ISponsorService {

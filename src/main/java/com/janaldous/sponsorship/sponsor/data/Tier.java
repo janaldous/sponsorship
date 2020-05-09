@@ -1,7 +1,5 @@
 package com.janaldous.sponsorship.sponsor.data;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;

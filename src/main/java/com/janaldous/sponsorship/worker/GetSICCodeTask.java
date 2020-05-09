@@ -13,9 +13,9 @@ import com.janaldous.sponsorship.companieshouse.data.SIC;
 import com.janaldous.sponsorship.companieshouse.dto.Company;
 import com.janaldous.sponsorship.namecomparison.AlphabetComparator;
 import com.janaldous.sponsorship.namecomparison.NameComparator;
-import com.janaldous.sponsorship.sponsor.RelevantSponsorRepository;
 import com.janaldous.sponsorship.sponsor.data.ProcessStatus;
 import com.janaldous.sponsorship.sponsor.data.RelevantSponsor;
+import com.janaldous.sponsorship.sponsor.repository.RelevantSponsorRepository;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;

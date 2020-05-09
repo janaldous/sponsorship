@@ -11,11 +11,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaBuilder.In;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Fetch;
 import javax.persistence.criteria.Join;
-import javax.persistence.criteria.JoinType;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
@@ -25,8 +22,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.janaldous.sponsorship.application.domain.EmailQueueItem;
-import com.janaldous.sponsorship.application.domain.EmailQueueStatus;
 import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
 import com.janaldous.sponsorship.checksponsor.CheckingSponsorRepository;
 import com.janaldous.sponsorship.companieshouse.data.CompanyHouseCompany;
@@ -38,6 +33,10 @@ import com.janaldous.sponsorship.sponsor.data.Sponsor;
 import com.janaldous.sponsorship.sponsor.data.Tier;
 import com.janaldous.sponsorship.sponsor.data.TierNum;
 import com.janaldous.sponsorship.sponsor.data.TierSub;
+import com.janaldous.sponsorship.sponsor.repository.CompanyResult;
+import com.janaldous.sponsorship.sponsor.repository.RelevantSponsorRepository;
+import com.janaldous.sponsorship.sponsor.repository.SponsorChecklist;
+import com.janaldous.sponsorship.sponsor.repository.SponsorRepository;
 import com.janaldous.sponsorship.webfacade.dto.CheckedDto;
 
 @Service
@@ -114,10 +113,8 @@ public class RelevantSponsorService implements IRelevantSponsorService {
 			Join<CompanyHouseCompany, Sponsor> sponsor = chCompany.join("sponsor");
 			Root<RelevantSponsor> relevantSponsor = cq
 					.from(RelevantSponsor.class);
-			Join<RelevantSponsor, Sponsor> joinRelevantSponsor = relevantSponsor.join("sponsor");
 			Root<CheckingSponsor> checkingSponsor = cq
 					.from(CheckingSponsor.class);
-			Join<CheckingSponsor, Sponsor> joinCheckingSponsor = checkingSponsor.join("sponsor");
 
 			Predicate predSponsor = cb.equal(relevantSponsor.get("sponsor"),
 					sponsor);
@@ -143,15 +140,12 @@ public class RelevantSponsorService implements IRelevantSponsorService {
 			TypedQuery<CompanyResult> typedQuery = entityManager
 					.createQuery(cq);
 
-			int realPageSize = PAGE_SIZE;
-			if (pageSize.isPresent()) {
-				realPageSize = pageSize.get();
-			}
-			if (pageNumber != null && pageNumber.isPresent()) {
-				int pageNo = pageNumber.get();
-				typedQuery.setFirstResult((pageNo) * realPageSize);
-				typedQuery.setMaxResults(realPageSize);
-			}
+		 	int realPageSize = pageSize.orElse(PAGE_SIZE);
+		 	int pageNo = pageNumber.orElse(0);
+		 	
+			typedQuery.setFirstResult((pageNo) * realPageSize);
+			typedQuery.setMaxResults(realPageSize);
+			
 			return typedQuery.getResultList();
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);

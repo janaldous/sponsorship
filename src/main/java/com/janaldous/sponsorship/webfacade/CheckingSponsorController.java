@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
-import com.janaldous.sponsorship.sponsor.CompanyResult;
 import com.janaldous.sponsorship.sponsor.IRelevantSponsorService;
-import com.janaldous.sponsorship.sponsor.SponsorChecklist;
+import com.janaldous.sponsorship.sponsor.repository.CompanyResult;
+import com.janaldous.sponsorship.sponsor.repository.SponsorChecklist;
 import com.janaldous.sponsorship.webfacade.dto.CheckedDto;
 
 @RestController

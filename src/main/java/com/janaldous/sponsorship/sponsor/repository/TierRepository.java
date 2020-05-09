@@ -1,4 +1,4 @@
-package com.janaldous.sponsorship.sponsor;
+package com.janaldous.sponsorship.sponsor.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

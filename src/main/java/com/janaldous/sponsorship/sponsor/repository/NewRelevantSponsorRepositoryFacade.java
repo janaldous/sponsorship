@@ -1,46 +1,26 @@
-package com.janaldous.sponsorship.sponsor;
+package com.janaldous.sponsorship.sponsor.repository;
 
 import java.math.BigInteger;
-import java.text.MessageFormat;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
 
-import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
-import com.janaldous.sponsorship.sponsor.data.RelevantSponsor;
-import com.janaldous.sponsorship.sponsor.repository.CompanyResult;
-import com.janaldous.sponsorship.sponsor.repository.SponsorChecklist;
-import com.janaldous.sponsorship.webfacade.dto.CheckedDto;
+@Primary
+@Repository
+public class NewRelevantSponsorRepositoryFacade implements IRelevantSponsorRepositoryFacade {
 
-public class RelevantSponsorService2 implements IRelevantSponsorService {
-
-	private Logger log = LoggerFactory.getLogger(RelevantSponsorService2.class);
-	
 	@Autowired
 	private EntityManagerFactory entityManagerFactory;
-
-	@Override
-	public List<RelevantSponsor> getNextBatch(int batchSize) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<CompanyResult> findAllRelevantSponsors(Optional<Integer> pageNumber, Optional<Integer> pageSize) {
-		return null;
-	}
 	
-	public List<SponsorChecklist> findAllRelevantSponsors3(Optional<Integer> pageNumber, Optional<Integer> pageSize) {
+	@Override
+	public List<SponsorChecklist> getRelevantSponsors(int pageNumber, int pageSize) {
 		List<Object[]> result = findAllRelevantSponsors2(pageNumber, pageSize);
 		return result .stream().map((x) -> {
 			String chName = castString(x[0]);
@@ -95,12 +75,7 @@ public class RelevantSponsorService2 implements IRelevantSponsorService {
 		return s != null ? (String) s: "";
 	}
 	
-	public List<Object[]> findAllRelevantSponsors2(Optional<Integer> optPageNumber, Optional<Integer> optPageSize) {
-		int pageNumber = optPageNumber.orElse(0);
-		int pageSize = optPageSize.orElse(10);
-		
-		log.info(MessageFormat.format("pageNumber={0} pageSize={1}", pageNumber, pageSize));
-		
+	private List<Object[]> findAllRelevantSponsors2(int pageNumber, int pageSize) {
 		EntityManager em = entityManagerFactory
 				.createEntityManager();
 		
@@ -142,31 +117,10 @@ public class RelevantSponsorService2 implements IRelevantSponsorService {
 		q.setParameter("tier2GeneralId", 4353);
 		q.setParameter("pageOffset", pageNumber * pageSize);
 		q.setParameter("pageSize", pageSize);
+		@SuppressWarnings("unchecked")
 		List<Object[]> result = q.getResultList();
 		
 		return result;
-	}
-
-	@Override
-	public CheckingSponsor checked(Long id, CheckedDto checked) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<CompanyResult> getCompanyResultsWithSchedule(Optional<Integer> pageNumber, Optional<Integer> pageSize) {
-		return null;
-	}
-
-	@Override
-	public List<SponsorChecklist> getCompanyResultsWithSchedule2(Optional<Integer> pageNumber,
-			Optional<Integer> pageSize) {
-		List<SponsorChecklist> findAllRelevantSponsors = findAllRelevantSponsors3(pageNumber, pageSize);
-		if (findAllRelevantSponsors == null) {
-			throw new IllegalStateException("cannot have null sponsors");
-		}
-
-		return findAllRelevantSponsors;
 	}
 
 }

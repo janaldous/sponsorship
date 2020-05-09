@@ -13,6 +13,7 @@ import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
 import com.janaldous.sponsorship.companieshouse.data.CompanyHouseCompany;
 import com.janaldous.sponsorship.namecomparison.NameNormalizer;
 import com.janaldous.sponsorship.sponsor.data.Sponsor;
+import com.janaldous.sponsorship.sponsor.repository.CompanyResult;
 
 @RunWith(SpringRunner.class)
 public class RelevantSponsorTest {

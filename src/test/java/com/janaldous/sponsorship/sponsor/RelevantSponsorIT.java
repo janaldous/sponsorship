@@ -14,6 +14,9 @@ import com.janaldous.sponsorship.checksponsor.CheckingSponsorRepository;
 import com.janaldous.sponsorship.sponsor.data.RelevantSponsor;
 import com.janaldous.sponsorship.sponsor.data.TierNum;
 import com.janaldous.sponsorship.sponsor.data.TierSub;
+import com.janaldous.sponsorship.sponsor.repository.CompanyResult;
+import com.janaldous.sponsorship.sponsor.repository.RelevantSponsorRepository;
+import com.janaldous.sponsorship.sponsor.repository.SponsorRepository;
 
 @Ignore
 @RunWith(SpringRunner.class)

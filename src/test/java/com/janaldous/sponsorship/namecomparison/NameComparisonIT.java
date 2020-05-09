@@ -13,11 +13,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.janaldous.sponsorship.companieshouse.ICompanyHouseFacade;
 import com.janaldous.sponsorship.companieshouse.dto.Company;
-import com.janaldous.sponsorship.sponsor.RelevantSponsorRepository;
-import com.janaldous.sponsorship.sponsor.SponsorRepository;
 import com.janaldous.sponsorship.sponsor.data.ProcessStatus;
 import com.janaldous.sponsorship.sponsor.data.RelevantSponsor;
 import com.janaldous.sponsorship.sponsor.data.Sponsor;
+import com.janaldous.sponsorship.sponsor.repository.RelevantSponsorRepository;
+import com.janaldous.sponsorship.sponsor.repository.SponsorRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

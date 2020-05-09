@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.janaldous.sponsorship.sponsor.TierRepository;
 import com.janaldous.sponsorship.sponsor.data.Tier;
 import com.janaldous.sponsorship.sponsor.data.TierNum;
 import com.janaldous.sponsorship.sponsor.data.TierSub;
+import com.janaldous.sponsorship.sponsor.repository.TierRepository;
 
 @Ignore
 @RunWith(SpringRunner.class)

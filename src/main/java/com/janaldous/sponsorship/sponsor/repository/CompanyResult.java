@@ -1,4 +1,4 @@
-package com.janaldous.sponsorship.sponsor;
+package com.janaldous.sponsorship.sponsor.repository;
 
 import com.janaldous.sponsorship.checksponsor.CheckingSponsor;
 import com.janaldous.sponsorship.companieshouse.data.CompanyHouseCompany;

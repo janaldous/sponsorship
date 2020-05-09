@@ -1,35 +1,8 @@
-package com.janaldous.sponsorship.sponsor;
+package com.janaldous.sponsorship.sponsor.repository;
 
-import lombok.Value;
+import lombok.Data;
 
-/*
- * const company: any = data.company;
-    const checking: any = data.checking;
-    return {
-        companyHouseName: company.companyHouseName,
-        companyHouseId: company.companiesHouseId,
-        sponsor: company.sponsor.name,
-        sponsorId: company.sponsor.id,
-        applied: checking.applied,
-        checkLater: checking.checkLater,
-        noCareers: checking.noCareers,
-        incorrectLikeness: checking.incorrectLikeness,
-        finished: checking.checked,
-        otherInfo: checking.otherInfo || "",
-        shouldCheckToday: data.shouldCheckToday,
-        needRightToWork: checking.needRightToWork,
-        noTechJobs: checking.noTechJobs,
-        possibleIncorrectLikeness: data.possibleIncorrectLikeness,
-        categories: checking.categories || "",
-        niceSite: checking.niceSite,
-        interestingIdea: checking.interestingIdea,
-        appliedByEmail: checking.appliedByEmail,
-        abroad: checking.abroad,
-        noOpenings: checking.noOpenings,
-    };
- */
-
-@Value
+@Data
 public class SponsorChecklist {
 	
 //	public SponsorChecklist(String companyHouseName, Long companyHouseId, String sponsorName, Long sponsorId, Boolean applied, Boolean hasDraftEmail) {
@@ -56,14 +29,14 @@ public class SponsorChecklist {
 //	}
 	
 	private String companyHouseName;
-	private Long companyHouseId;
-	private String sponsorName;
-	private Long sponsorId;
+	private String companyHouseId;
+	private String checkingSponsorName;
+	private Long checkingSponsorId;
 	
 	private boolean applied;
 	private boolean checkLater;
 	private boolean noCareers;
-	private boolean finished;
+	private Boolean finished;
 	private boolean needRightToWork;
 	
 	private boolean noTechJobs;
@@ -79,6 +52,4 @@ public class SponsorChecklist {
 	private String categories;
 	private String otherInfo;
 
-	private boolean shouldCheckToday;
-	
 }

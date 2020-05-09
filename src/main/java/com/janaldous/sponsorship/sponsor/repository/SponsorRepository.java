@@ -1,4 +1,4 @@
-package com.janaldous.sponsorship.sponsor;
+package com.janaldous.sponsorship.sponsor.repository;
 
 import java.util.List;
 
