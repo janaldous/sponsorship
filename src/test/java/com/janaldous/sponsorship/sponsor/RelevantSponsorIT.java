@@ -16,6 +16,7 @@ import com.janaldous.sponsorship.sponsor.data.TierNum;
 import com.janaldous.sponsorship.sponsor.data.TierSub;
 import com.janaldous.sponsorship.sponsor.repository.CompanyResult;
 import com.janaldous.sponsorship.sponsor.repository.RelevantSponsorRepository;
+import com.janaldous.sponsorship.sponsor.repository.SponsorChecklist;
 import com.janaldous.sponsorship.sponsor.repository.SponsorRepository;
 
 @Ignore
@@ -61,7 +62,7 @@ public class RelevantSponsorIT {
 	
 //	@Test
 	public void test3() {
-		List<CompanyResult> companies = relevantSponsorService.findAllRelevantSponsors(null, null);
+		List<SponsorChecklist> companies = relevantSponsorService.findAllRelevantSponsors(null, null);
 		System.out.println(companies.size());
 //		companies.stream().forEach(x -> {
 //			CheckingSponsor sponsor = CheckingSponsor.builder().sponsor(x.getCompany().getSponsor()).build();
@@ -71,7 +72,7 @@ public class RelevantSponsorIT {
 	
 	@Test
 	public void test4() {
-		List<CompanyResult> companies = relevantSponsorService.findAllRelevantSponsors(Optional.of(10), Optional.of(5));
+		List<SponsorChecklist> companies = relevantSponsorService.findAllRelevantSponsors(Optional.of(10), Optional.of(5));
 		System.out.println(companies.size());
 	}
 }

@@ -18,8 +18,6 @@ import com.janaldous.sponsorship.sponsor.data.TierSub;
 
 public class SponsorChecklistMapperTest {
 
-	private SponsorChecklistMapper mapper = new SponsorChecklistMapper();
-
 	// tests: arrange, act, assert
 	
 	@Test
@@ -63,9 +61,9 @@ public class SponsorChecklistMapperTest {
 		
 		CompanyResult companyResult = new CompanyResult(chc, checking);
 
-		SponsorChecklist sponsorChecklist = mapper.to(companyResult);
-		assertEquals(checking.getId(), sponsorChecklist.getCheckingSponsorId());
-		assertEquals(sponsor.getName(), sponsorChecklist.getCheckingSponsorName());
+		SponsorChecklist sponsorChecklist = SponsorChecklistMapper.to(companyResult);
+		assertEquals(sponsor.getId(), sponsorChecklist.getSponsorId());
+		assertEquals(sponsor.getName(), sponsorChecklist.getSponsorName());
 		assertEquals(chc.getCompaniesHouseId(), sponsorChecklist.getCompanyHouseId());
 		assertEquals(chc.getCompanyHouseName(), sponsorChecklist.getCompanyHouseName());
 		assertEquals(checking.getCategories(), sponsorChecklist.getCategories());

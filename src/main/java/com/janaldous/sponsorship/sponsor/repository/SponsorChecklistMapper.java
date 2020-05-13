@@ -17,8 +17,8 @@ public class SponsorChecklistMapper {
 		output.setApplied(cs.isApplied());
 		output.setAppliedByEmail(cs.isAppliedByEmail());
 		output.setCategories(cs.getCategories());
-		output.setCheckingSponsorId(cs.getId());
-		output.setCheckingSponsorName(sponsor.getName());
+		output.setSponsorId(sponsor.getId());
+		output.setSponsorName(sponsor.getName());
 		output.setCheckLater(cs.isCheckLater());
 		output.setCompanyHouseId(chc.getCompaniesHouseId());
 		output.setCompanyHouseName(chc.getCompanyHouseName());

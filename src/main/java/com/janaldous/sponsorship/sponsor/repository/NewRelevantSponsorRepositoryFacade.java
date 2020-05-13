@@ -46,8 +46,8 @@ public class NewRelevantSponsorRepositoryFacade implements IRelevantSponsorRepos
 			SponsorChecklist sc = new SponsorChecklist();
 			sc.setCompanyHouseName(chName);
 			sc.setCompanyHouseId(chId);
-			sc.setCheckingSponsorName(sponsorName);
-			sc.setCheckingSponsorId(sponsorId);
+			sc.setSponsorName(sponsorName);
+			sc.setSponsorId(sponsorId);
 			sc.setApplied(applied);
 			sc.setCheckLater(checkLater);
 			sc.setNoCareers(noCareers);
@@ -83,7 +83,7 @@ public class NewRelevantSponsorRepositoryFacade implements IRelevantSponsorRepos
 		+ "chc.company_house_name, "
 		+ "chc.companies_house_id, "
 		+ "s.name, "
-		+ "cs.id as checking_sponsor_id, "
+		+ "s.id as sponsor_id, "
 		+ "cs.applied, "
 		+ "cs.check_later, "
 		+ "cs.no_careers, "

@@ -30,8 +30,8 @@ public class SponsorChecklist {
 	
 	private String companyHouseName;
 	private String companyHouseId;
-	private String checkingSponsorName;
-	private Long checkingSponsorId;
+	private String sponsorName;
+	private Long sponsorId;
 	
 	private boolean applied;
 	private boolean checkLater;
