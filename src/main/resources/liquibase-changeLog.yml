@@ -1,0 +1,11 @@
+databaseChangeLog:
+-  changeSet:  
+      id:  1  
+      author:  jat.torres
+      preConditions:
+         not:
+            tableExists: sponsor
+      changes:
+         - sqlFile:
+            relativeToChangelogFile: true
+            path: changesets/sponsorship_dump.sql
